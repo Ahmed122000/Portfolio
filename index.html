@@ -8,6 +8,7 @@
 
         <title>SAH portofolio</title>
         <link rel="stylesheet" href="/style/main_page.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     </head>
 
     <body>
@@ -27,126 +28,506 @@
 
        <main>
 
-        <section id = "hero" class="section">
-            <img src="../static/imgs/Ahmed.png">
-            <h1>Hello, I'm Ahmed Hesham</h1>
-            <p>Computer and System Engineer | Passoinate Learner</p>
-            <a href="#projects" class="btn"> View My Work</a>
-            <div>
-        </div>
+        <section id = "hero">
+            <div class="hero-content">
+                <img src="static/imgs/personal/Ahmed.png" alt="Selfie of Ahmed Hesham, a computer and Systems Engineer">
+                <h1>Hello, I'm Ahmed Hesham</h1>
+                <p>Software Engineer | Passoinate Learner</p>
+                <a href="#projects" class="btn" title="Explore my projects"> View My Work</a>
+            </div>
         </section>
+       
         
-        <section id="about" class="section">
+        <section id="about" class="section odd">
             <h2>About Me</h2>
-            <p></p>
+            <img src="static/imgs/personal/ahmed2.png" alt="A photo of Ahmed Hehsam" class="about-photo">
+            <p>
+                Hi there! 👋 I’m a fresh software engineering graduate (Class of 2024) with a knack for turning ideas into successful projects.
+            </p> 
+            <p> 
+                Over the years, I’ve explored multiple programming languages like C/C++, Java, and Python, and expanded my expertise with frameworks like Spring Boot and Flask. I’ve also honed my skills using tools like Git, GitHub, and Postman, and I’m currently diving into Docker and GitLab to broaden my toolkit.
+            </p>
+            <p>
+                I’ve worked across diverse fields, from web development—building simple yet functional websites—to machine learning and AI, where I’ve developed and deployed various models. I’ve even dabbled in creating terminal and desktop applications, which taught me the importance of precision and attention to detail.
+                What motivates me? The thrill of seeing a project come to life! There’s nothing quite like the feeling of creating something that works beautifully and has a meaningful purpose. Outside of coding, I enjoy learning new technologies, solving challenging problems, and constantly pushing my skills to the next level. My dream is to master my craft and, one day, secure a spot at one of the top companies in the field.
+            </p>
+            <p>
+                A fun fact: I participated in the ECPC competition for problem-solving, which taught me how to approach complex challenges with creativity and persistence. Whether it’s building a professional-grade application or solving puzzles, I’m all about aiming for excellence!
+            </p>
+
         </section>
 
-        <section id="education" class="section">
+        <section id="education" class="section even">
             <h2>Education</h2>
-            <p></p>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>2020 - 2024</h4>
+                    <p>Bachelor’s Degree in Computer and Systems Engineering<br>Faculty of Engineering, Alexandria University</p>
+                </div>
+                <img src="static/imgs/faculty/faculty of engineering.jpeg" alt="Faculty of Engineering-Alexandria University building" title="Faculty of Engineering, Alexandria University" class="education-img">
+            </div>
+            
+            <p>
+                I earned my Bachelor’s degree in Computer and Systems Engineering from the Faculty of Engineering, Alexandria University, graduating in 2024. My academic journey equipped me with expertise in software engineering and technology through rigorous coursework and practical experiences.
+            </p>
+            <h3>Key Courses</h3>
+            <ul>
+                <li>Design & Analysis of Algorithms</li>
+                <li>Data Structures</li>
+                <li>Design Patterns</li>
+                <li>Object-Oriented Programming</li>
+                <li>Software Engineering with Agile Methodologies</li>
+                <li>Machine Learning, Deep Learning, and Computer Vision</li>
+                <li>Database Management (SQL)</li>
+            </ul>
+            <h3>Notable Projects</h3>
+            <ul>
+                <li>Developed a game engine using Scala</li>
+                <li>Created a chess game in C</li>
+                <li>Designed a compiler (lexical analyzer and parser) in C++</li>
+            </ul>
+            <p>
+                Beyond academics, I actively participated in the ECPC Competition for Problem Solving, which helped me sharpen my analytical thinking and teamwork abilities. My time at Alexandria University not only equipped me with technical skills but also nurtured a passion for innovation and excellence in software engineering.
+            </p>
         </section>
         
-        <section id="skills" class="section">
+        <section id="skills" class="section odd">
+            <h2> Skills </h2>
             <div class="skill-item">
-                <p>Programming language</p>
+                <h3>Programming language</h3>
                 <ul>
-                    <li>C/C++</li>
-                    <li>Java</li>
-                    <li>Python</li>
-                    <li>Html</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
+                    <li>
+                        <div class="skill-card">
+                            <p><i class="fa-solid fa-c"></i> C/C++</p>                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>    
+                    </li>
+                    
+                    <li>
+                        <div class="skill-card">
+                            <p><i class="fab fa-java"></i> Java</p>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>  
+                    </li>
+
+                    <li>
+                        <div class="skill-card">
+                            <p><i class="fab fa-python"></i> Python</p>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>  
+                    </li>
+                        
+                    <li>
+                        <div class="skill-card">
+                            <p><i class="fab fa-html5"></i> html</p>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="skill-card">
+                            <p><i class="fab fa-css3"></i> CSS</p>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="skill-card">
+                            <p><i class="fab fa-js"></i> JS</p>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
             
             <div class="skill-item">
-                <p>FrameWorks</p>
+                <h3>FrameWorks</h3>
                 <ul>
-                    <li>Spring-boot</li>
-                    <li>Flask</li>
-                    <li>JavaFX</li>
-                    <li>Junit</li>
-                    <li>BeautifulSoup</li>
-                    <li>scikit-learn</li>
+                    <li>
+                        <div class="skill-card">
+                            <p>Spring-boot</p>
+                            <div class="stars">
+                                <div class="stars">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="skill-card">
+                            <p>Flask</p>
+                            <div class="stars">
+                                <div class="stars">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="skill-card">
+                            <p>JavaFx</p>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="skill-card">
+                            <p>Junit</p>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="skill-card">
+                            <p>BeautifuSoup</p>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="skill-card">
+                            <p>Scikit-learn</p>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
 
             <div class="skill-item">
-                <p>DataBases</p>
+                <h3>DataBases</h3>
                 <ul>
-                    <li>MySQL</li>
-                    <li>MongoDB</li>
+                    <li>
+                        <div class="skill-card">
+                            <p>MySQL</p>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="skill-card">
+                            <p>MongoDB</p>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
 
             <div class="skill-item">
-                <p>Tools</p>
+                <h3>Tools</h3>
                 <ul>
-                    <li>Git </li>
-                    <li>GitHub</li>
-                    <li>GitLab</li>
-                    <li>PostMan</li>
+                    <li>
+                        <div class="skill-card">
+                            <p><i class="fab fa-git"></i> Git</p>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="skill-card">
+                            <p><i class="fab fa-github"></i> GitHub</p>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="skill-card">
+                            <p><i class="fab fa-gitlab"></i> GitLab</p>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </li>
+                    
+                    <li>
+                        <div class="skill-card">
+                            <p>PostMan</p>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="skill-card">
+                            <p><i class="fab fa-docker"></i> Docker</p>
+                            <div class="stars">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star "></span>
+                                <span class="fa fa-star"></span>
+                                <span class="fa fa-star"></span>
+                            </div>
+                        </div>
+                    </li>
                 </ul>
             </div>
-
         </section>
         
-        <section id="projects" class="section">
+        <section id="projects" class="section even">
             <h2>Projects</h2>
-            <div class="project-card">
-                <h3>Url Shortener</h3>
-                <p>System to shorten the url </p>
-                <a href="#" target="_blank"> View on Github</a>
+        
+            <div id="project-grid">
+        
+                <div class="project-card">
+                    <img src="static/imgs/projects/urlShortener.png" alt="SAH Shortener Project Screenshot">
+                    <h3>URL Shortener</h3>
+                    <p>SAH Shortener is a user-friendly website for converting long URLs into short, manageable links. The project employs a clean architecture with a clear separation between front-end and back-end components for better performance and ease of maintenance.</p>
+                    <ul class="tech-stack">
+                        <li>Spring Boot</li>
+                        <li>JPA Hibernate</li>
+                        <li>API</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                    </ul>
+                    <a href="https://github.com/Ahmed122000/URL_Shortener" target="_blank" class="btn">View on GitHub</a>
+                </div>
+        
+                <div class="project-card">
+                    <img src="static/imgs/projects/huffmanEncoder.png" alt="Huffman Encoder Project Screenshot">
+                    <h3>Huffman Encoder</h3>
+                    <p>This desktop application allows users to compress and decompress files using the Huffman algorithm. It features a user-friendly GUI interface and an optional terminal-based interface for advanced users.</p>
+                    <ul class="tech-stack">
+                        <li>Java</li>
+                        <li>JavaFX</li>
+                        <li>JAR File</li>
+                    </ul>
+                    <a href="https://github.com/Ahmed122000/Compression-Alg" target="_blank" class="btn">View on GitHub</a>
+                </div>
+        
+                <div class="project-card">
+                    <img src="static/imgs/projects/ml_deploy.png" alt="Model Deployment Project Screenshot">
+                    <h3>ML Model Deployment</h3>
+                    <p>This Flask-based web application predicts whether a data scientist is likely to stay with or leave a company. It includes tools for training machine learning models, evaluating their performance, and making predictions based on user inputs. Designed with HR analytics in mind, it helps facilitate data-driven decision-making processes.</p>
+                    <ul class="tech-stack">
+                        <li>Python</li>
+                        <li>Flask</li>
+                        <li>Scikit-learn</li>
+                        <li>API</li>
+                    </ul>
+                    <a href="https://github.com/Ahmed122000/ML_model_deployment" target="_blank" class="btn">View on GitHub</a>
+                </div>
+        
+                <div class="project-card">
+                    <img src="static/imgs/projects/scrapping.png" alt="Scraping Logo">
+                    <h3>Booking Scraper</h3>
+                    <p>This project automates the extraction of hotel data from Booking.com. It scrapes details like hotel names, addresses, images, amenities, ratings, and room types. The scraped data is processed, cleaned, and stored in a structured JSON format for easy analysis.</p>
+                    <ul class="tech-stack">
+                        <li>Python</li>
+                        <li>BeautifulSoup</li>
+                        <li>JSON</li>
+                        <li>Selenium</li>
+                    </ul>
+                    <a href="https://github.com/Ahmed122000/Booking_Scrapping" target="_blank" class="btn">View on GitHub</a>
+                </div>
+        
+                <div class="project-card">
+                    <img src="static/imgs/projects/termianlChess.png" alt="Terminal Chess Screenshot">
+                    <h3>Terminal Chess</h3>
+                    <p>Terminal Chess is a chess game simulation with a terminal-based interface. It supports two players and incorporates most standard chess rules, providing an engaging experience without a GUI.</p>
+                    <ul class="tech-stack">
+                        <li>C</li>
+                        <li>Terminal</li>
+                        <li>Makefile</li>
+                        <li>File Handling</li>
+                    </ul>
+                    <a href="https://github.com/Ahmed122000/URL_Shortener" target="_blank" class="btn">View on GitHub</a>
+                </div>
+        
+                <div class="project-card">
+                    <img src="static/imgs/projects/text_analyzer.png" alt="News Analyzer Project Screenshot">
+                    <h3>Simple News Analyzer</h3>
+                    <p>This web application uses the MeaningCloud API to analyze the sentiment of online articles. It provides insights into the polarity, subjectivity, and includes sentiment-specific snippets (positive, negative, or neutral) extracted from the article.</p>
+                    <ul class="tech-stack">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Webpack</li>
+                        <li>Node.js</li>
+                    </ul>
+                    <a href="https://github.com/Ahmed122000/Simple-News-Analyzer" target="_blank" class="btn">View on GitHub</a>
+                </div>
+        
             </div>
-
-            <div class="project-card">
-                
+        </section>
+        
+        </section>
+        
+        <section id="courses" class="section odd">
+            <h2>Courses & Certificates</h2>
+            <div class="courses-grid">
+        
+                <div class="course-card">
+                    <img src="static/imgs/certifcates_padges/frone-end_freelancing.png" alt="Front-end-freelancing Image">
+                    <h3>Front End Web Developer & Digital Freelancing</h3>
+                    <p>This course provides a solid starting point for freelancing in the front-end field. It introduces HTML, CSS, and JavaScript, followed by advanced topics like SASS and Webpack. Additionally, the course covers essential freelancing skills, steps to get started, and features hands-on projects to apply the concepts learned.</p>
+                    <p><strong>Provider:</strong> Udacity</p>
+                </div>
+        
+                <div class="course-card">
+                    <img src="static/imgs/certifcates_padges/sql.png" alt="Sql Certificate Image">
+                    <h3>SQL</h3>
+                    <p>This course teaches SQL, a fundamental language for managing and querying databases. It empowers learners to extract and manipulate data independently, a vital skill for data scientists. Topics include database management and creating SQL queries, with practical exercises to reinforce learning.</p>
+                    <p><strong>Provider:</strong> 365DataScience</p>
+                    <a href="https://learn.365datascience.com/courses/preview/sql/" target="_blank" class="btn">View Course</a>
+                    <a href="https://learn.365datascience.com/c/a28ccd2a24/" target="_blank" class="btn">View Certificate</a>
+                </div>
+        
+                <div class="course-card">
+                    <img src="static/imgs/certifcates_padges/Samsung_Inovation_ML.jpeg" alt="Samsung Innovation ML Certificate Image">
+                    <h3>Introduction to AI & ML</h3>
+                    <p>This course provides an introduction to machine learning, starting with Python basics, linear algebra, and statistics. It progresses to machine learning algorithms with hands-on projects and culminates in deep learning using TensorFlow. The course concludes with a graduation project in machine learning or deep learning.</p>
+                    <p><strong>Provider:</strong> Samsung Innovation</p>
+                </div>
+        
+                <div class="course-card">
+                    <img src="static/imgs/certifcates_padges/mathematics-for-ml-certificate.png" alt="mathematics-for-ml-certificate Image">
+                    <h3>Mathematics for Machine Learning Specialization</h3>
+                    <p>This specialization bridges the gap between mathematical foundations and their applications in machine learning and data science. It covers key mathematical concepts intuitively, enabling learners to build a solid foundation for advanced courses in these fields.</p>
+                    <p><strong>Provider:</strong> Coursera | Stanford</p>
+                    <a href="https://www.coursera.org/specializations/mathematics-machine-learning" target="_blank" class="btn">View Course</a>
+                    <a href="https://coursera.org/share/add6e2a77dd3b59487643a2dce42b66e" target="_blank" class="btn">View Certificate</a>
+                </div>
+        
+                <div class="course-card">
+                    <img src="static/imgs/certifcates_padges/machine-learning_certificate.png" alt="Machine learning Certificate Image">
+                    <h3>Machine Learning Specialization</h3>
+                    <p>This beginner-friendly specialization, created by DeepLearning.AI and Stanford Online, teaches the fundamentals of machine learning and its applications in real-world AI projects. It is designed to provide a strong foundation for understanding and building AI solutions.</p>
+                    <p><strong>Provider:</strong> Coursera | Stanford</p>
+                    <a href="https://www.coursera.org/specializations/machine-learning-introduction" target="_blank" class="btn">View Course</a>
+                    <a href="https://coursera.org/share/d83d7b356bbe3909e87085fd22433c22" target="_blank" class="btn">View Certificate</a>
+                </div>
+        
+                <div class="course-card">
+                    <img src="static/imgs/certifcates_padges/recommender-certificate.png" alt="Recommender Certificate Image">
+                    <h3>Introduction to Recommender Systems: Non-Personalized and Content-Based</h3>
+                    <p>This course introduces the concept of recommender systems, covering topics like non-personalized recommendations, demographic-based recommendations, and content-based filtering. It serves as the first step in the Recommender Systems Specialization.</p>
+                    <p><strong>Provider:</strong> Coursera | University of Minnesota</p>
+                    <a href="https://www.coursera.org/learn/recommender-systems-introduction" target="_blank" class="btn">View Course</a>
+                    <a href="https://coursera.org/share/e389870abfa31663c50c4b0e6a52b6db" target="_blank" class="btn">View Certificate</a>
+                </div>
+        
+                <div class="course-card">
+                    <img src="static/imgs/certifcates_padges/applied-data-science-lab.png" alt="Applied Data Science lab Image">
+                    <h3>Applied Data Science Lab</h3>
+                    <p>This course includes eight end-to-end applied data science projects. Participants learn to access data from files, SQL/NoSQL databases, and APIs, explore and clean data, create ETL pipelines, build machine learning models for various tasks, and create visualizations for non-technical audiences.</p>
+                    <p><strong>Provider:</strong> WorldQuant University</p>
+                    <a href="https://www.wqu.edu/adsl-apply" target="_blank" class="btn">View Course</a>
+                    <a href="https://www.credly.com/badges/a8439d6e-6ba8-4a6e-bd30-aa454d5ac5b4/public_url" target="_blank" class="btn">View Certificate</a>
+                </div>
+        
             </div>
-
-            <div class="project-card">
-                
-            </div>
-
-            <div class="project-card">
-                
-            </div>
-
-            <div class="project-card">
-                
-            </div>
-
-            <div class="project-card">
-                
-            </div>
-            
         </section>
         
 
-        <section id="courses" class="section">
-            <h2>Courses & Certificates</h2>
-            <div class="course"></div>
-            <div class="course"></div>
-            <div class="course"></div>
-            <div class="course"></div>
-            <div class="course"></div>
-
-        </section>
-
-        <section id="Certificates" class="section">
-            <div class="certificate"></div>
-            <div class="certificate"></div>
-            <div class="certificate"></div>
-            <div class="certificate"></div>
-            <div class="certificate"></div>
-            <div class="certificate"></div>
-        </section>
-
-        <section id="contact" class="section">
+        <section id="contact" class="section odd">
             <h2>Contact Me</h2>
             <p>Feel Free to reach out via email or connect on LinkedIn: </p>
-            <ul>
+            
+            
+            <ul class="contact-links">
                 <li>Email: <a href="mailto:ahmedhesham122000@gmail.com">ahmedhesham122000@gmail.com</a></li>
-                <li><a href="https://linkedin.com/in/eng-ahmed-hesham24" target="_blank">LinkedIn</a></li>
+                <li><a href="https://linkedin.com/in/eng-ahmed-hesham24" target="_blank" class="linkedin-link"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
             </ul>
         </section>
 
@@ -154,29 +535,29 @@
 
        <footer>
             <div id="socials">
-                <ul>
+                <ul class="social-links">
                     <li>
-                        <a>facebook</a>
-                    </li>
-                
-                    <li>
-                        <a>discord</a>
+                        <a href="https://linkedin/in/eng-ahmed-hesham24" target="_blank" class="fab fa-linkedin" title="LinkedIn"></a>
                     </li>
                     
                     <li>
-                        <a>linkedin</a>
+                        <a href="mailto:ahmedhesham122000@gmail.com" target="_blank" class="fab fa-google" title="Email"></a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.github.com/ahmed122000" target="_blank" class="fab fa-github" title="GitHub"></a>
                     </li>
                     
                     <li>
-                        <a>github</a>
-                    </li>
-                    
-                    <li>
-                        <a>gitlab</a>
+                        <a href="https://gitlab.com/ahmedhesham122000" target="_blank" class="fab fa-gitlab" title="GitLab"></a>
                     </li>
                 </ul>
             </div>
             <p>&copy; 2025 Ahmed Hesham. All rights reserved.</p>
-       </footer>
+       
+        <a href="#hero" class="back-to-top" title="Back to Top">
+            <i class="fa fa-arrow-up"></i>
+        </a>
+        </footer>
     </body>
 </html>
