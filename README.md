@@ -4,7 +4,7 @@
 Welcome to my portfolio website repository! This project showcases my skills, projects, and certifications in web development, machine learning, and data science. The website is built to serve as a dynamic resume, providing a detailed overview of my work and achievements.  
 
 ## 🖥️ Live Demo  
-Check out the live website here: [Your Portfolio Link](#).  
+Check out the live website here: [Portfolio Link](ahmed122000.github.io/Portofolio/).  
 
 ---
 
@@ -67,7 +67,7 @@ The portfolio is built using:
 ---
 
 ## 📸 Screenshots  
-### Homepage  
+### Hero Section  
 ![Portfolio Homepage](static/imgs/hero_section.png)  
 
 ### Courses Section  
@@ -80,7 +80,7 @@ The portfolio is built using:
 ---
 
 ## 🔗 Links  
-- **Live Website**: [Portfolio Website](#)  
+- **Live Website**: [Portfolio Website](ahmed122000.github.io/Portofolio/)  
 - **GitHub Profile**: [Ahmed122000](https://github.com/ahmed122000)  
 
 ---
