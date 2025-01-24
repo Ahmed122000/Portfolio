@@ -11,15 +11,13 @@ Check out the live website here: [Your Portfolio Link](#).
 ## 🛠️ Features  
 - **Courses & Certificates**: Displays a collection of completed courses and certifications with descriptions and links to view the certificates.  
 - **Projects**: Highlights major projects with detailed descriptions, tech stacks, and GitHub links for each.  
-- **Responsive Design**: Fully responsive for a seamless experience on all devices.  
-
+  
 ---
 
 ## 📂 Project Structure  
 ```plaintext
 ├── index.html          # Main HTML file for the website
 ├── style.css           # Stylesheet for website styling
-├── scripts.js          # JavaScript for dynamic functionality
 ├── static/             # Static assets (images, icons, etc.)
 │   ├── imgs/
 │   │   ├── certificates_badges/  # Images for certificates
@@ -33,8 +31,7 @@ Check out the live website here: [Your Portfolio Link](#).
 ## 🚀 Getting Started  
 
 ### Prerequisites  
-- Basic knowledge of HTML, CSS, and JavaScript.  
-- [Node.js](https://nodejs.org/) installed for additional development tools (optional).  
+- Basic knowledge of HTML, CSS, and JavaScript.   
 
 ### Installation  
 1. Clone the repository:  
@@ -45,19 +42,7 @@ Check out the live website here: [Your Portfolio Link](#).
    ```bash
    cd portfolio  
    ```  
-3. Open `index.html` in your browser to view the portfolio.  
-
-### Optional: Start a Local Server  
-To run the website on a local server:  
-1. Install the `http-server` package globally:  
-   ```bash
-   npm install -g http-server  
-   ```  
-2. Start the server:  
-   ```bash
-   http-server  
-   ```  
-3. Open the provided local URL in your browser.  
+3. Open `index.html` in your browser to view the portfolio.
 
 ---
 
@@ -77,14 +62,13 @@ A detailed portfolio of my major projects with:
 ## 🛠️ Tech Stack  
 The portfolio is built using:  
 - **HTML**: Structuring the web pages.  
-- **CSS**: Styling and responsive design.  
-- **JavaScript**: Adding interactivity and functionality.  
+- **CSS**: Styling and responsive design.   
 
 ---
 
 ## 📸 Screenshots  
 ### Homepage  
-![Portfolio Homepage](static/imgs/portfolio_homepage.png)  
+![Portfolio Homepage](static/imgs/hero_section.png)  
 
 ### Courses Section  
 ![Courses Section](static/imgs/courses_section.png)  
@@ -92,30 +76,12 @@ The portfolio is built using:
 ### Projects Section  
 ![Projects Section](static/imgs/projects_section.png)  
 
----
-
-## 🤝 Contributing  
-Contributions, issues, and feature requests are welcome!  
-1. Fork the repository.  
-2. Create your feature branch:  
-   ```bash
-   git checkout -b feature/YourFeatureName  
-   ```  
-3. Commit your changes:  
-   ```bash
-   git commit -m 'Add some feature'  
-   ```  
-4. Push to the branch:  
-   ```bash
-   git push origin feature/YourFeatureName  
-   ```  
-5. Open a pull request.  
 
 ---
 
 ## 🔗 Links  
 - **Live Website**: [Portfolio Website](#)  
-- **GitHub Profile**: [Your GitHub Username](https://github.com/YourUsername)  
+- **GitHub Profile**: [Ahmed122000](https://github.com/ahmed122000)  
 
 ---
 
