@@ -92,6 +92,7 @@ Feel free to use, modify, and distribute this project as per the terms of the li
 ---
 
 ## 🙏 Acknowledgments  
+- this portfolio was designed using [claude.ai](https://claude.ai/)
 - [MeaningCloud API](https://www.meaningcloud.com/) for sentiment analysis.  
 - [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) and [Selenium](https://selenium.dev/) for web scraping support.  
 - [Coursera](https://www.coursera.org/) and [Udacity](https://www.udacity.com/) for providing great learning resources.  
