@@ -1,6 +1,6 @@
 # 🎯 Ahmed Hesham - Portfolio
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat-square&logo=linkedin)](https://linkedin.com/in/ahmed-hesham)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?style=flat-square&logo=linkedin)](https://linkedin.com/in/eng-ahmed-hesham24)
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-black?style=flat-square&logo=github)](https://github.com/Ahmed122000)
 [![Portfolio](https://img.shields.io/badge/Portfolio-Live-green?style=flat-square)](https://ahmed122000.github.io/Portfolio/)
 
@@ -84,25 +84,17 @@ A modern, responsive portfolio website showcasing my professional journey, proje
 ```plaintext
 Portfolio/
 ├── index.html                    # Main entry point
-├── styles.css                    # Global styling
+├── style.css                     # Global styling
 ├── script.js                     # Interactivity & animations
-├── assets/                       # All media assets
-│   ├── images/
-│   │   ├── hero/                # Hero section images
-│   │   ├── projects/            # Project screenshots
-│   │   ├── certificates/        # Certificate badges
-│   │   └── skills/              # Skill icons
-│   ├── icons/                   # SVG icons
-│   └── fonts/                   # Custom fonts
-├── sections/                     # HTML sections (modular)
-│   ├── navbar.html
-│   ├── hero.html
-│   ├── about.html
-│   ├── projects.html
-│   ├── certifications.html
-│   ├── skills.html
-│   └── contact.html
-└── README.md                    # This file
+├── static/                       # All media assets
+│   ├── imgs/
+│   │   ├── hero/                 # Hero section images
+│   │   ├── projects/             # Project screenshots
+│   │   ├── certificates/         # Certificate badges
+│   │   └── personal/             # Personal photos
+│   ├── icons/                    # SVG icons
+│   └── fonts/                    # Custom fonts
+└── README.md                     # This file
 ```
 
 ---
@@ -159,7 +151,7 @@ Portfolio/
    - Click to view full certification
 
 4. **Contact**:
-   - Use the contact form or click social links
+   - Use the contact links in the Contact section
    - Email: ahmedhesham122000@gmail.com
 
 ---
@@ -175,7 +167,6 @@ Portfolio/
 - Professional biography
 - Career highlights
 - Key achievements
-- Download resume option
 
 ### 3️⃣ Featured Projects
 Showcase of top projects including:
@@ -201,7 +192,7 @@ Showcase of top projects including:
 - **Tools**: Git, Docker, VS Code
 
 ### 6️⃣ Contact
-- Email form
+- Email form (mailto link)
 - Social media links
 - Phone number
 - Location information
@@ -226,7 +217,7 @@ const projects = [
 ```
 
 ### Updating Styling
-Modify `styles.css` to customize:
+Modify `style.css` to customize:
 - Colors and fonts
 - Layout and spacing
 - Animations and transitions
@@ -283,7 +274,7 @@ Feel free to use this portfolio as a template for your own!
 ## 📞 Contact & Social
 
 - 📧 **Email**: ahmedhesham122000@gmail.com
-- 💼 **LinkedIn**: [Ahmed Hesham](https://linkedin.com/in/ahmed-hesham)
+- 💼 **LinkedIn**: [Ahmed Hesham](https://linkedin.com/in/eng-ahmed-hesham24)
 - 🐙 **GitHub**: [@Ahmed122000](https://github.com/Ahmed122000)
 - 🌐 **Portfolio**: [ahmed122000.github.io/Portfolio](https://ahmed122000.github.io/Portfolio/)
 
