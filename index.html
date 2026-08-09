@@ -9,6 +9,13 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <!-- Open Graph / Twitter Card -->
+    <meta property="og:title" content="Ahmed Hesham — Software Engineer">
+    <meta property="og:description" content="A modern responsive portfolio showcasing projects, certifications and skills in web development and ML.">
+    <meta property="og:image" content="https://raw.githubusercontent.com/Ahmed122000/Portfolio/main/static/imgs/hero_section.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Favicon (temporary: hero image) -->
+    <link rel="icon" type="image/png" href="/static/imgs/hero_section.png">
 </head>
 <body>
 
@@ -23,7 +30,7 @@
 <header id="main-header">
     <div class="header-inner">
         <div class="logo">SAH<span class="accent">.</span></div>
-        <nav class="nav-bar">
+        <nav id="main-nav" class="nav-bar" role="navigation" aria-label="Main navigation">
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
@@ -33,7 +40,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="hamburger" id="hamburger">
+        <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
             <span></span><span></span><span></span>
         </div>
     </div>
@@ -91,9 +98,9 @@
                 </div>
                 <div class="about-text-col">
                     <p>Hi there! 👋 I'm a fresh software engineering graduate <strong>(Class of 2024)</strong> with a knack for turning ideas into successful projects.</p>
-                    <p>Over the years, I've explored multiple programming languages like C/C++, Java, and Python, and expanded my expertise with frameworks like <strong>Spring Boot</strong> and <strong>Flask</strong>. I've also honed my skills using tools like Git, GitHub, and Postman, and I'm currently diving into Docker and GitLab.</p>
-                    <p>I've worked across diverse fields — from web development to machine learning and AI, where I've developed and deployed various models. My dream is to master my craft and secure a spot at one of the top companies in the field.</p>
-                    <p>🏆 Fun fact: I participated in the <strong>ECPC competition</strong> for problem-solving, which taught me how to approach complex challenges with creativity and persistence.</p>
+                    <p>Over the years, I've explored multiple programming languages like C/C++, Java, and Python, and expanded my expertise with frameworks like <strong>Spring Boot</strong> and <s[...]
+                    <p>I've worked across diverse fields — from web development to machine learning and AI, where I've developed and deployed various models. My dream is to master my craft and s[...]
+                    <p>🏆 Fun fact: I participated in the <strong>ECPC competition</strong> for problem-solving, which taught me how to approach complex challenges with creativity and persistenc[...]
                 </div>
             </div>
         </div>
@@ -281,9 +288,9 @@
 
                 <div class="project-card tilt-card">
                     <div class="project-img-wrap">
-                        <img src="static/imgs/projects/urlShortener.png" alt="URL Shortener">
+                        <img src="static/imgs/projects/urlShortener.png" alt="URL Shortener" loading="lazy">
                         <div class="project-overlay">
-                            <a href="https://github.com/Ahmed122000/URL_Shortener" target="_blank" class="overlay-btn"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/Ahmed122000/URL_Shortener" target="_blank" rel="noopener noreferrer" class="overlay-btn"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                     <div class="project-body">
@@ -297,9 +304,9 @@
 
                 <div class="project-card tilt-card">
                     <div class="project-img-wrap">
-                        <img src="static/imgs/projects/huffmanEncoder.png" alt="Huffman Encoder">
+                        <img src="static/imgs/projects/huffmanEncoder.png" alt="Huffman Encoder" loading="lazy">
                         <div class="project-overlay">
-                            <a href="https://github.com/Ahmed122000/Compression-Alg" target="_blank" class="overlay-btn"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/Ahmed122000/Compression-Alg" target="_blank" rel="noopener noreferrer" class="overlay-btn"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                     <div class="project-body">
@@ -313,9 +320,9 @@
 
                 <div class="project-card tilt-card">
                     <div class="project-img-wrap">
-                        <img src="static/imgs/projects/ml_deploy.png" alt="ML Deployment">
+                        <img src="static/imgs/projects/ml_deploy.png" alt="ML Deployment" loading="lazy">
                         <div class="project-overlay">
-                            <a href="https://github.com/Ahmed122000/ML_model_deployment" target="_blank" class="overlay-btn"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/Ahmed122000/ML_model_deployment" target="_blank" rel="noopener noreferrer" class="overlay-btn"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                     <div class="project-body">
@@ -329,9 +336,9 @@
 
                 <div class="project-card tilt-card">
                     <div class="project-img-wrap">
-                        <img src="static/imgs/projects/scrapping.png" alt="Booking Scraper">
+                        <img src="static/imgs/projects/scrapping.png" alt="Booking Scraper" loading="lazy">
                         <div class="project-overlay">
-                            <a href="https://github.com/Ahmed122000/Booking_Scrapping" target="_blank" class="overlay-btn"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/Ahmed122000/Booking_Scrapping" target="_blank" rel="noopener noreferrer" class="overlay-btn"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                     <div class="project-body">
@@ -345,9 +352,9 @@
 
                 <div class="project-card tilt-card">
                     <div class="project-img-wrap">
-                        <img src="static/imgs/projects/termianlChess.png" alt="Terminal Chess">
+                        <img src="static/imgs/projects/termianlChess.png" alt="Terminal Chess" loading="lazy">
                         <div class="project-overlay">
-                            <a href="https://github.com/Ahmed122000/chess" target="_blank" class="overlay-btn"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/Ahmed122000/chess" target="_blank" rel="noopener noreferrer" class="overlay-btn"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                     <div class="project-body">
@@ -361,9 +368,9 @@
 
                 <div class="project-card tilt-card">
                     <div class="project-img-wrap">
-                        <img src="static/imgs/projects/text_analyzer.png" alt="News Analyzer">
+                        <img src="static/imgs/projects/text_analyzer.png" alt="News Analyzer" loading="lazy">
                         <div class="project-overlay">
-                            <a href="https://github.com/Ahmed122000/Simple-News-Analyzer" target="_blank" class="overlay-btn"><i class="fab fa-github"></i> GitHub</a>
+                            <a href="https://github.com/Ahmed122000/Simple-News-Analyzer" target="_blank" rel="noopener noreferrer" class="overlay-btn"><i class="fab fa-github"></i> GitHub</a>
                         </div>
                     </div>
                     <div class="project-body">
@@ -387,7 +394,7 @@
             <div class="courses-grid">
 
                 <div class="course-card tilt-card">
-                    <img src="static/imgs/certifcates_padges/frone-end_freelancing.png" alt="Front-end">
+                    <img src="static/imgs/certifcates_padges/frone-end_freelancing.png" alt="Front-end" loading="lazy">
                     <div class="course-body">
                         <div class="course-provider">Udacity</div>
                         <h3>Front End Web Developer & Digital Freelancing</h3>
@@ -396,20 +403,20 @@
                 </div>
 
                 <div class="course-card tilt-card">
-                    <img src="static/imgs/certifcates_padges/sql.png" alt="SQL">
+                    <img src="static/imgs/certifcates_padges/sql.png" alt="SQL" loading="lazy">
                     <div class="course-body">
                         <div class="course-provider">365DataScience</div>
                         <h3>SQL</h3>
                         <p>Database management and SQL queries for data scientists.</p>
                         <div class="course-links">
-                            <a href="https://learn.365datascience.com/courses/preview/sql/" target="_blank" class="btn-course">Course</a>
-                            <a href="https://learn.365datascience.com/c/a28ccd2a24/" target="_blank" class="btn-course cert">Certificate</a>
+                            <a href="https://learn.365datascience.com/courses/preview/sql/" target="_blank" rel="noopener noreferrer" class="btn-course">Course</a>
+                            <a href="https://learn.365datascience.com/c/a28ccd2a24/" target="_blank" rel="noopener noreferrer" class="btn-course cert">Certificate</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="course-card tilt-card">
-                    <img src="static/imgs/certifcates_padges/Samsung_Inovation_ML.jpeg" alt="Samsung ML">
+                    <img src="static/imgs/certifcates_padges/Samsung_Inovation_ML.jpeg" alt="Samsung ML" loading="lazy">
                     <div class="course-body">
                         <div class="course-provider">Samsung Innovation</div>
                         <h3>Introduction to AI & ML</h3>
@@ -418,53 +425,53 @@
                 </div>
 
                 <div class="course-card tilt-card">
-                    <img src="static/imgs/certifcates_padges/mathematics-for-ml-certificate.png" alt="Math for ML">
+                    <img src="static/imgs/certifcates_padges/mathematics-for-ml-certificate.png" alt="Math for ML" loading="lazy">
                     <div class="course-body">
                         <div class="course-provider">Coursera | Stanford</div>
                         <h3>Mathematics for Machine Learning</h3>
                         <p>Mathematical foundations bridging theory and ML/data science applications.</p>
                         <div class="course-links">
-                            <a href="https://www.coursera.org/specializations/mathematics-machine-learning" target="_blank" class="btn-course">Course</a>
-                            <a href="https://coursera.org/share/add6e2a77dd3b59487643a2dce42b66e" target="_blank" class="btn-course cert">Certificate</a>
+                            <a href="https://www.coursera.org/specializations/mathematics-machine-learning" target="_blank" rel="noopener noreferrer" class="btn-course">Course</a>
+                            <a href="https://coursera.org/share/add6e2a77dd3b59487643a2dce42b66e" target="_blank" rel="noopener noreferrer" class="btn-course cert">Certificate</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="course-card tilt-card">
-                    <img src="static/imgs/certifcates_padges/machine-learning_certificate.png" alt="ML Specialization">
+                    <img src="static/imgs/certifcates_padges/machine-learning_certificate.png" alt="ML Specialization" loading="lazy">
                     <div class="course-body">
                         <div class="course-provider">Coursera | Stanford</div>
                         <h3>Machine Learning Specialization</h3>
                         <p>Beginner-friendly ML fundamentals by DeepLearning.AI and Stanford Online.</p>
                         <div class="course-links">
-                            <a href="https://www.coursera.org/specializations/machine-learning-introduction" target="_blank" class="btn-course">Course</a>
-                            <a href="https://coursera.org/share/d83d7b356bbe3909e87085fd22433c22" target="_blank" class="btn-course cert">Certificate</a>
+                            <a href="https://www.coursera.org/specializations/machine-learning-introduction" target="_blank" rel="noopener noreferrer" class="btn-course">Course</a>
+                            <a href="https://coursera.org/share/d83d7b356bbe3909e87085fd22433c22" target="_blank" rel="noopener noreferrer" class="btn-course cert">Certificate</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="course-card tilt-card">
-                    <img src="static/imgs/certifcates_padges/recommender-certificate.png" alt="Recommender Systems">
+                    <img src="static/imgs/certifcates_padges/recommender-certificate.png" alt="Recommender Systems" loading="lazy">
                     <div class="course-body">
                         <div class="course-provider">Coursera | U of Minnesota</div>
                         <h3>Introduction to Recommender Systems</h3>
                         <p>Non-personalized, demographic, and content-based filtering fundamentals.</p>
                         <div class="course-links">
-                            <a href="https://www.coursera.org/learn/recommender-systems-introduction" target="_blank" class="btn-course">Course</a>
-                            <a href="https://coursera.org/share/e389870abfa31663c50c4b0e6a52b6db" target="_blank" class="btn-course cert">Certificate</a>
+                            <a href="https://www.coursera.org/learn/recommender-systems-introduction" target="_blank" rel="noopener noreferrer" class="btn-course">Course</a>
+                            <a href="https://coursera.org/share/e389870abfa31663c50c4b0e6a52b6db" target="_blank" rel="noopener noreferrer" class="btn-course cert">Certificate</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="course-card tilt-card">
-                    <img src="static/imgs/certifcates_padges/applied-data-science-lab.png" alt="Data Science Lab">
+                    <img src="static/imgs/certifcates_padges/applied-data-science-lab.png" alt="Data Science Lab" loading="lazy">
                     <div class="course-body">
                         <div class="course-provider">WorldQuant University</div>
                         <h3>Applied Data Science Lab</h3>
                         <p>Eight end-to-end projects: ETL pipelines, ML models, SQL/NoSQL, APIs and visualizations.</p>
                         <div class="course-links">
-                            <a href="https://www.wqu.edu/adsl-apply" target="_blank" class="btn-course">Course</a>
-                            <a href="https://www.credly.com/badges/a8439d6e-6ba8-4a6e-bd30-aa454d5ac5b4/public_url" target="_blank" class="btn-course cert">Certificate</a>
+                            <a href="https://www.wqu.edu/adsl-apply" target="_blank" rel="noopener noreferrer" class="btn-course">Course</a>
+                            <a href="https://www.credly.com/badges/a8439d6e-6ba8-4a6e-bd30-aa454d5ac5b4/public_url" target="_blank" rel="noopener noreferrer" class="btn-course cert">Certificate</a>
                         </div>
                     </div>
                 </div>
@@ -484,15 +491,15 @@
                     <i class="fas fa-envelope"></i>
                     <span>ahmedhesham122000@gmail.com</span>
                 </a>
-                <a href="https://linkedin.com/in/eng-ahmed-hesham24" target="_blank" class="contact-card">
+                <a href="https://linkedin.com/in/eng-ahmed-hesham24" target="_blank" rel="noopener noreferrer" class="contact-card">
                     <i class="fab fa-linkedin"></i>
                     <span>linkedin.com/in/eng-ahmed-hesham24</span>
                 </a>
-                <a href="https://www.github.com/ahmed122000" target="_blank" class="contact-card">
+                <a href="https://github.com/Ahmed122000" target="_blank" rel="noopener noreferrer" class="contact-card">
                     <i class="fab fa-github"></i>
-                    <span>github.com/ahmed122000</span>
+                    <span>github.com/Ahmed122000</span>
                 </a>
-                <a href="https://gitlab.com/ahmedhesham122000" target="_blank" class="contact-card">
+                <a href="https://gitlab.com/ahmedhesham122000" target="_blank" rel="noopener noreferrer" class="contact-card">
                     <i class="fab fa-gitlab"></i>
                     <span>gitlab.com/ahmedhesham122000</span>
                 </a>
@@ -506,15 +513,15 @@
 <footer>
     <div class="footer-inner">
         <div class="footer-logo">SAH<span class="accent">.</span></div>
-        <p class="footer-copy">&copy; 2025 Ahmed Hesham. All rights reserved.</p>
+        <p class="footer-copy">&copy; 2026 Ahmed Hesham. All rights reserved.</p>
         <div class="social-links">
-            <a href="https://linkedin.com/in/eng-ahmed-hesham24" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="https://linkedin.com/in/eng-ahmed-hesham24" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
             <a href="mailto:ahmedhesham122000@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-            <a href="https://www.github.com/ahmed122000" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            <a href="https://gitlab.com/ahmedhesham122000" target="_blank" title="GitLab"><i class="fab fa-gitlab"></i></a>
+            <a href="https://github.com/Ahmed122000" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://gitlab.com/ahmedhesham122000" target="_blank" rel="noopener noreferrer" title="GitLab"><i class="fab fa-gitlab"></i></a>
         </div>
     </div>
-    <a href="#hero" class="back-to-top" title="Back to Top"><i class="fa fa-arrow-up"></i></a>
+    <a href="#hero" class="back-to-top" title="Back to Top" aria-label="Back to top"><i class="fa fa-arrow-up"></i></a>
 </footer>
 
 <script src="./script.js"></script>
