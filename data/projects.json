@@ -1,0 +1,139 @@
+[
+    {
+      "title": "URL Shortener",
+      "category": "Backend",
+      "featured": true,
+      "image": "static/imgs/projects/urlShortener.png",
+      "github": "https://github.com/Ahmed122000/URL_Shortener",
+      "demo": null,
+      "description": "A URL shortening application that transforms long URLs into shorter, manageable links.",
+      "problem": "Long URLs can be difficult to share, manage, and use.",
+      "solution": "Built a URL shortening application with separate frontend and backend components.",
+      "technicalHighlights": [
+        "REST API development",
+        "Spring Boot application structure",
+        "JPA-based data persistence",
+        "Frontend and backend separation"
+      ],
+      "technologies": [
+        "Java",
+        "Spring Boot",
+        "JPA",
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "title": "Huffman Encoder",
+      "category": "Algorithms",
+      "featured": false,
+      "image": "static/imgs/projects/huffmanEncoder.png",
+      "github": "https://github.com/Ahmed122000/Compression-Alg",
+      "demo": null,
+      "description": "A file compression and decompression application based on the Huffman coding algorithm.",
+      "problem": "Files can contain redundant information that can be represented more efficiently.",
+      "solution": "Implemented Huffman coding to compress and decompress files through both graphical and terminal interfaces.",
+      "technicalHighlights": [
+        "Huffman coding algorithm",
+        "File compression and decompression",
+        "Algorithm implementation",
+        "GUI and command-line interfaces"
+      ],
+      "technologies": [
+        "Java",
+        "JavaFX",
+        "JAR"
+      ]
+    },
+    {
+      "title": "ML Model Deployment",
+      "category": "Machine Learning",
+      "featured": true,
+      "image": "static/imgs/projects/ml_deploy.png",
+      "github": "https://github.com/Ahmed122000/ML_model_deployment",
+      "demo": null,
+      "description": "An employee attrition prediction application that makes a machine learning model accessible through Flask.",
+      "problem": "Understanding employee attrition patterns can help HR teams make better-informed decisions.",
+      "solution": "Built a Flask application to expose an employee attrition prediction model.",
+      "technicalHighlights": [
+        "Machine learning model integration",
+        "Flask application development",
+        "Prediction through an API"
+      ],
+      "technologies": [
+        "Python",
+        "Flask",
+        "Scikit-learn",
+        "API"
+      ]
+    },
+    {
+      "title": "Booking Scraper",
+      "category": "Automation",
+      "featured": false,
+      "image": "static/imgs/projects/scrapping.png",
+      "github": "https://github.com/Ahmed122000/Booking_Scrapping",
+      "demo": null,
+      "description": "A web scraping project that extracts hotel information from Booking.com and stores it in JSON format.",
+      "problem": "Collecting hotel information manually can be repetitive and time-consuming.",
+      "solution": "Automated the extraction of hotel names, ratings, and amenities from Booking.com.",
+      "technicalHighlights": [
+        "Web scraping",
+        "HTML parsing",
+        "Browser automation",
+        "JSON data storage"
+      ],
+      "technologies": [
+        "Python",
+        "BeautifulSoup",
+        "Selenium",
+        "JSON"
+      ]
+    },
+    {
+      "title": "Terminal Chess",
+      "category": "Algorithms",
+      "featured": false,
+      "image": "static/imgs/projects/termianlChess.png",
+      "github": "https://github.com/Ahmed122000/chess",
+      "demo": null,
+      "description": "A two-player chess game implemented in C with standard chess rules and a terminal-based interface.",
+      "problem": "Implementing a board game requires representing its state and enforcing its rules correctly.",
+      "solution": "Developed a terminal-based chess game for two players.",
+      "technicalHighlights": [
+        "Game state management",
+        "Chess rule implementation",
+        "C programming",
+        "Terminal-based interaction"
+      ],
+      "technologies": [
+        "C",
+        "Terminal",
+        "Makefile"
+      ]
+    },
+    {
+      "title": "Simple News Analyzer",
+      "category": "Web Development",
+      "featured": false,
+      "image": "static/imgs/projects/text_analyzer.png",
+      "github": "https://github.com/Ahmed122000/Simple-News-Analyzer",
+      "demo": null,
+      "description": "A web application that analyzes the sentiment of online news articles using the MeaningCloud API.",
+      "problem": "Understanding the sentiment expressed in an article requires analyzing its text.",
+      "solution": "Built a web application that uses MeaningCloud to analyze article sentiment, including polarity and subjectivity.",
+      "technicalHighlights": [
+        "External API integration",
+        "Sentiment analysis",
+        "JavaScript application development",
+        "Webpack"
+      ],
+      "technologies": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Webpack",
+        "MeaningCloud API"
+      ]
+    }
+  ]

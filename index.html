@@ -6,7 +6,7 @@
     <meta name="author" content="Ahmed Hesham">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahmed Hesham — Software Engineer</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
     <!-- Open Graph / Twitter Card -->
@@ -283,108 +283,65 @@
     <section id="projects" class="section alt-bg">
         <div class="section-inner">
             <div class="section-label">04 / Projects</div>
-            <h2 class="section-title">Featured <span class="accent">Projects</span></h2>
-            <div id="project-grid">
+    
+        <div id="project-filters" class="project-filters"
+            aria-label="Filter projects by category">
+        </div>
 
-                <div class="project-card tilt-card">
-                    <div class="project-img-wrap">
-                        <img src="static/imgs/projects/urlShortener.png" alt="URL Shortener" loading="lazy">
-                        <div class="project-overlay">
-                            <a href="https://github.com/Ahmed122000/URL_Shortener" target="_blank" rel="noopener noreferrer" class="overlay-btn"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                    <div class="project-body">
-                        <h3>URL Shortener</h3>
-                        <p>SAH Shortener converts long URLs into short, manageable links with clean front/back-end separation.</p>
-                        <ul class="tech-stack">
-                            <li>Spring Boot</li><li>JPA</li><li>API</li><li>HTML</li><li>CSS</li>
-                        </ul>
-                    </div>
-                </div>
+            <h2 class="section-title">
+                Featured <span class="accent">Projects</span>
+            </h2>
+            
 
-                <div class="project-card tilt-card">
-                    <div class="project-img-wrap">
-                        <img src="static/imgs/projects/huffmanEncoder.png" alt="Huffman Encoder" loading="lazy">
-                        <div class="project-overlay">
-                            <a href="https://github.com/Ahmed122000/Compression-Alg" target="_blank" rel="noopener noreferrer" class="overlay-btn"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                    <div class="project-body">
-                        <h3>Huffman Encoder</h3>
-                        <p>Desktop app to compress/decompress files using the Huffman algorithm, with GUI and terminal interfaces.</p>
-                        <ul class="tech-stack">
-                            <li>Java</li><li>JavaFX</li><li>JAR</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="project-card tilt-card">
-                    <div class="project-img-wrap">
-                        <img src="static/imgs/projects/ml_deploy.png" alt="ML Deployment" loading="lazy">
-                        <div class="project-overlay">
-                            <a href="https://github.com/Ahmed122000/ML_model_deployment" target="_blank" rel="noopener noreferrer" class="overlay-btn"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                    <div class="project-body">
-                        <h3>ML Model Deployment</h3>
-                        <p>Flask app that predicts data scientist attrition using trained ML models — built for HR analytics.</p>
-                        <ul class="tech-stack">
-                            <li>Python</li><li>Flask</li><li>Scikit-learn</li><li>API</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="project-card tilt-card">
-                    <div class="project-img-wrap">
-                        <img src="static/imgs/projects/scrapping.png" alt="Booking Scraper" loading="lazy">
-                        <div class="project-overlay">
-                            <a href="https://github.com/Ahmed122000/Booking_Scrapping" target="_blank" rel="noopener noreferrer" class="overlay-btn"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                    <div class="project-body">
-                        <h3>Booking Scraper</h3>
-                        <p>Automates hotel data extraction from Booking.com — names, ratings, amenities stored as structured JSON.</p>
-                        <ul class="tech-stack">
-                            <li>Python</li><li>BeautifulSoup</li><li>Selenium</li><li>JSON</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="project-card tilt-card">
-                    <div class="project-img-wrap">
-                        <img src="static/imgs/projects/termianlChess.png" alt="Terminal Chess" loading="lazy">
-                        <div class="project-overlay">
-                            <a href="https://github.com/Ahmed122000/chess" target="_blank" rel="noopener noreferrer" class="overlay-btn"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                    <div class="project-body">
-                        <h3>Terminal Chess</h3>
-                        <p>Full chess simulation in the terminal, supporting two players with standard chess rules.</p>
-                        <ul class="tech-stack">
-                            <li>C</li><li>Terminal</li><li>Makefile</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="project-card tilt-card">
-                    <div class="project-img-wrap">
-                        <img src="static/imgs/projects/text_analyzer.png" alt="News Analyzer" loading="lazy">
-                        <div class="project-overlay">
-                            <a href="https://github.com/Ahmed122000/Simple-News-Analyzer" target="_blank" rel="noopener noreferrer" class="overlay-btn"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                    <div class="project-body">
-                        <h3>Simple News Analyzer</h3>
-                        <p>Web app using the MeaningCloud API to analyze sentiment polarity and subjectivity of online articles.</p>
-                        <ul class="tech-stack">
-                            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Webpack</li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
+            
+            <div id="featured-project-grid"></div>
+    
+            <h2 class="section-title other-projects-title">
+                Other <span class="accent">Projects</span>
+            </h2>
+    
+            <div id="other-project-grid"></div>
         </div>
     </section>
+
+    <dialog id="project-dialog" class="project-dialog">
+        <div class="dialog-content">
+            <button
+                type="button"
+                class="dialog-close"
+                aria-label="Close project details"
+            >
+                &times;
+            </button>
+    
+            <h2 id="dialog-title"></h2>
+    
+            <div class="dialog-section">
+                <h3>Problem</h3>
+                <p id="dialog-problem"></p>
+            </div>
+    
+            <div class="dialog-section">
+                <h3>Solution</h3>
+                <p id="dialog-solution"></p>
+            </div>
+    
+            <div class="dialog-section">
+                <h3>Technical Highlights</h3>
+                <ul id="dialog-highlights"></ul>
+            </div>
+    
+            <div class="dialog-section">
+                <h3>Technologies</h3>
+                <ul id="dialog-technologies" class="tech-stack"></ul>
+            </div>
+    
+            <a id="dialog-github" target="_blank"
+               rel="noopener noreferrer" class="overlay-btn">
+                GitHub Repository
+            </a>
+        </div>
+    </dialog>
 
     <!---------- Courses ---------->
     <section id="courses" class="section">
@@ -524,6 +481,6 @@
     <a href="#hero" class="back-to-top" title="Back to Top" aria-label="Back to top"><i class="fa fa-arrow-up"></i></a>
 </footer>
 
-<script src="./script.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
