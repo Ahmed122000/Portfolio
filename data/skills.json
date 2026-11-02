@@ -1,0 +1,141 @@
+
+{
+    "categories": [
+      {
+        "title": "Backend Development",
+        "icon": "⚙",
+        "skills": [
+          {
+            "name": "Spring Boot",
+            "icon": "🍃",
+            "type": "emoji"
+          },
+          {
+            "name": "Flask",
+            "icon": "🌶",
+            "type": "emoji"
+          },
+          {
+            "name": "Django",
+            "icon": "fab fa-python",
+            "type": "class"
+          }
+        ]
+      },
+      {
+        "title": "Programming Languages",
+        "icon": "⌨",
+        "skills": [
+          {
+            "name": "Java",
+            "icon": "fab fa-java",
+            "type": "class"
+          },
+          {
+            "name": "Python",
+            "icon": "fab fa-python",
+            "type": "class"
+          },
+          {
+            "name": "C / C++",
+            "icon": "fa-solid fa-c",
+            "type": "class"
+          },
+          {
+            "name": "JavaScript",
+            "icon": "fab fa-js",
+            "type": "class"
+          },
+          {
+            "name": "HTML",
+            "icon": "fab fa-html5",
+            "type": "class"
+          },
+          {
+            "name": "CSS",
+            "icon": "fab fa-css3-alt",
+            "type": "class"
+          }
+        ]
+      },
+      {
+        "title": "Databases",
+        "icon": "🗄",
+        "skills": [
+          {
+            "name": "MySQL",
+            "icon": "🐬",
+            "type": "emoji"
+          },
+          {
+            "name": "MongoDB",
+            "icon": "🍃",
+            "type": "emoji"
+          },
+          {
+            "name": "PostgreSQL",
+            "icon": "🐘",
+            "type": "emoji"
+          }
+        ]
+      },
+      {
+        "title": "Tools & Platforms",
+        "icon": "🛠",
+        "skills": [
+          {
+            "name": "Git",
+            "icon": "fab fa-git-alt",
+            "type": "class"
+          },
+          {
+            "name": "GitHub",
+            "icon": "fab fa-github",
+            "type": "class"
+          },
+          {
+            "name": "GitLab",
+            "icon": "fab fa-gitlab",
+            "type": "class"
+          },
+          {
+            "name": "Docker",
+            "icon": "fab fa-docker",
+            "type": "class"
+          },
+          {
+            "name": "Linux",
+            "icon": "fab fa-linux",
+            "type": "class"
+          }
+        ]
+      },
+      {
+        "title": "Libraries & Testing",
+        "icon": "🧪",
+        "skills": [
+          {
+            "name": "JavaFX",
+            "icon": "☕",
+            "type": "emoji"
+          },
+          {
+            "name": "JUnit",
+            "icon": "🧪",
+            "type": "emoji"
+          },
+          {
+            "name": "BeautifulSoup",
+            "icon": "🕸",
+            "type": "emoji"
+          },
+          {
+            "name": "Scikit-learn",
+            "icon": "🤖",
+            "type": "emoji"
+          }
+        ]
+      }
+    ]
+  }
+  

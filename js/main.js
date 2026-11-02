@@ -1,138 +1,192 @@
+
+const prefersReducedMotion = window.matchMedia(
+    '(prefers-reduced-motion: reduce)'
+).matches;
+
 // ============================
 // CUSTOM CURSOR
 // ============================
-const dot = document.querySelector('.cursor-dot');
-const ring = document.querySelector('.cursor-ring');
 
-let mouseX = 0, mouseY = 0;
-let ringX = 0, ringY = 0;
+if(!prefersReducedMotion){
+    const dot = document.querySelector('.cursor-dot');
+    const ring = document.querySelector('.cursor-ring');
 
-// Track mouse movement
-document.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
+    let mouseX = 0;
+    let mouseY = 0;
+    let ringX = 0;
+    let ringY = 0;
+    let cursorAnimationId = null;
 
-    dot.style.left = mouseX + 'px';
-    dot.style.top = mouseY + 'px';
+    function animateCursor() {
+        ringX += (mouseX - ringX) * 0.12;
+        ringY += (mouseY - ringY) * 0.12;
 
-    // Handle hover state
-    const hoverTarget = e.target.closest(
+        ring.style.left = ringX + 'px';
+        ring.style.top = ringY + 'px';
+
+        // Stop when the ring is close enough to the mouse
+        if (Math.abs(mouseX - ringX) > 0.1 ||
+            Math.abs(mouseY - ringY) > 0.1) {
+            cursorAnimationId = requestAnimationFrame(animateCursor);
+        } else {
+            cursorAnimationId = null;
+        }
+    }
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+
+        dot.style.left = mouseX + 'px';
+        dot.style.top = mouseY + 'px';
+
+        const hoverTarget = e.target.closest(
         'a, button, .skill-card, .project-card, .course-card, .contact-card, #project-dialog'
-    );
+        );
 
-    ring.classList.toggle('hovering', Boolean(hoverTarget));
-});
+        ring.classList.toggle('hovering', Boolean(hoverTarget));
 
-// Animate the cursor ring
-function animateCursor() {
-    ringX += (mouseX - ringX) * 0.12;
-    ringY += (mouseY - ringY) * 0.12;
-
-    ring.style.left = ringX + 'px';
-    ring.style.top = ringY + 'px';
-
-    requestAnimationFrame(animateCursor);
+        // Start animation only if one isn't already running
+        if (cursorAnimationId === null) {
+            cursorAnimationId = requestAnimationFrame(animateCursor);
+        }
+    });
 }
-
-animateCursor();
 
 // ============================
 // PARTICLE CANVAS
 // ============================
 const canvas = document.getElementById('particle-canvas');
-const ctx = canvas.getContext('2d');
+const ctx = canvas?.getContext('2d');
 
-function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-}
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
-
-const particles = [];
-const NUM_PARTICLES = 80;
-
-class Particle {
-    constructor() { this.reset(true); }
-    reset(initial = false) {
-        this.x = Math.random() * canvas.width;
-        this.y = initial ? Math.random() * canvas.height : canvas.height + 10;
-        this.size = Math.random() * 1.5 + 0.5;
-        this.speedY = -(Math.random() * 0.4 + 0.1);
-        this.speedX = (Math.random() - 0.5) * 0.2;
-        this.opacity = Math.random() * 0.5 + 0.1;
-        this.color = Math.random() > 0.5 ? '99,179,237' : '246,173,85';
+if(canvas && ctx){
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
     }
-    update() {
-        this.x += this.speedX;
-        this.y += this.speedY;
-        if (this.y < -10) this.reset();
-    }
-    draw() {
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fillStyle = `rgba(${this.color},${this.opacity})`;
-        ctx.fill();
-    }
-}
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
 
-for (let i = 0; i < NUM_PARTICLES; i++) particles.push(new Particle());
+    const particles = [];
+    const NUM_PARTICLES = 80;
 
-function drawLines() {
-    for (let i = 0; i < particles.length; i++) {
-        for (let j = i + 1; j < particles.length; j++) {
-            const dx = particles[i].x - particles[j].x;
-            const dy = particles[i].y - particles[j].y;
-            const dist = Math.sqrt(dx * dx + dy * dy);
-            if (dist < 120) {
-                ctx.beginPath();
-                ctx.strokeStyle = `rgba(99,179,237,${0.06 * (1 - dist / 120)})`;
-                ctx.lineWidth = 0.5;
-                ctx.moveTo(particles[i].x, particles[i].y);
-                ctx.lineTo(particles[j].x, particles[j].y);
-                ctx.stroke();
+    class Particle {
+        constructor() { this.reset(true); }
+        reset(initial = false) {
+            this.x = Math.random() * canvas.width;
+            this.y = initial ? Math.random() * canvas.height : canvas.height + 10;
+            this.size = Math.random() * 1.5 + 0.5;
+            this.speedY = -(Math.random() * 0.4 + 0.1);
+            this.speedX = (Math.random() - 0.5) * 0.2;
+            this.opacity = Math.random() * 0.5 + 0.1;
+            this.color = Math.random() > 0.5 ? '99,179,237' : '246,173,85';
+        }
+        update() {
+            this.x += this.speedX;
+            this.y += this.speedY;
+            if (this.y < -10) this.reset();
+        }
+        draw() {
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+            ctx.fillStyle = `rgba(${this.color},${this.opacity})`;
+            ctx.fill();
+        }
+    }
+
+    for (let i = 0; i < NUM_PARTICLES; i++) particles.push(new Particle());
+
+    function drawLines() {
+        for (let i = 0; i < particles.length; i++) {
+            for (let j = i + 1; j < particles.length; j++) {
+                const dx = particles[i].x - particles[j].x;
+                const dy = particles[i].y - particles[j].y;
+                const dist = Math.sqrt(dx * dx + dy * dy);
+                if (dist < 120) {
+                    ctx.beginPath();
+                    ctx.strokeStyle = `rgba(99,179,237,${0.06 * (1 - dist / 120)})`;
+                    ctx.lineWidth = 0.5;
+                    ctx.moveTo(particles[i].x, particles[i].y);
+                    ctx.lineTo(particles[j].x, particles[j].y);
+                    ctx.stroke();
+                }
             }
         }
     }
-}
 
-function animateParticles() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    particles.forEach(p => { p.update(); p.draw(); });
-    drawLines();
-    requestAnimationFrame(animateParticles);
-}
-animateParticles();
 
+    let particleAnimationId = null;
+
+    function animateParticles() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        particles.forEach(p => {
+            p.update();
+            p.draw();
+        });
+
+        drawLines();
+
+        particleAnimationId = requestAnimationFrame(animateParticles);
+    }
+
+    function startParticleAnimation() {
+        if (particleAnimationId !== null) return;
+        animateParticles();
+    }
+
+    function stopParticleAnimation() {
+        if (particleAnimationId === null) return;
+
+        cancelAnimationFrame(particleAnimationId);
+        particleAnimationId = null;
+    }
+
+    // Start when the page is visible
+    if (!prefersReducedMotion && !document.hidden) {
+        startParticleAnimation();
+    }
+
+    // Stop when the user switches tabs or minimizes the browser
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden || prefersReducedMotion) {
+            stopParticleAnimation();
+        } else {
+            startParticleAnimation();
+        }
+    });
+}
 // ============================
-// 3D TILT EFFECT
+// REUSABLE 3D TILT EFFECT
 // ============================
-document.querySelectorAll('.tilt-card').forEach(card => {
+
+function addTiltEffect(card) {
     card.addEventListener('mousemove', (e) => {
         const rect = card.getBoundingClientRect();
+
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top;
-        const cx = rect.width / 2;
-        const cy = rect.height / 2;
-        const rotX = ((y - cy) / cy) * -8;
-        const rotY = ((x - cx) / cx) * 8;
-        card.style.transform = `perspective(600px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateZ(4px)`;
+
+        const rotateX = ((y / rect.height) - 0.5) * -10;
+        const rotateY = ((x / rect.width) - 0.5) * 10;
+
+        card.style.transform =
+            `perspective(600px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(4px)`;
     });
+
     card.addEventListener('mouseleave', () => {
-        card.style.transform = 'perspective(600px) rotateX(0) rotateY(0) translateZ(0)';
-        card.style.transition = 'transform 0.5s ease';
+        card.style.transform =
+            'perspective(600px) rotateX(0) rotateY(0) translateZ(0)';
     });
-    card.addEventListener('mouseenter', () => {
-        card.style.transition = 'transform 0.1s ease, border-color 0.3s, box-shadow 0.3s';
-    });
-});
+}
+
+// Apply to elements already present in HTML
+document.querySelectorAll('.tilt-card').forEach(addTiltEffect);
+
 
 // ============================
 // SCROLL REVEAL
 // ============================
-
-
-
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry, i) => {
         if (entry.isIntersecting) {
@@ -150,48 +204,42 @@ const revealEls = document.querySelectorAll(
 revealEls.forEach(el => el.classList.add('reveal'));
 revealEls.forEach(el => observer.observe(el));
 
-// ============================
-// SKILL BAR ANIMATION TRIGGER
-// ============================
-const skillBars = document.querySelectorAll('.skill-fill');
-const barObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.animationPlayState = 'running';
-            barObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.5 });
-skillBars.forEach(bar => {
-    bar.style.animationPlayState = 'paused';
-    barObserver.observe(bar);
-});
 
 // ============================
 // BACK TO TOP VISIBILITY
 // ============================
 const backToTop = document.querySelector('.back-to-top');
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 400) backToTop.classList.add('visible');
-    else backToTop.classList.remove('visible');
-});
 
+if(backToTop){
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) backToTop.classList.add('visible');
+        else backToTop.classList.remove('visible');
+    });
+}
 // ============================
 // MOBILE NAV HAMBURGER
 // ============================
 const hamburger = document.getElementById('hamburger');
 const navBar = document.querySelector('.nav-bar');
-hamburger.addEventListener('click', () => {
-    navBar.classList.toggle('open');
-    hamburger.classList.toggle('open');
-});
-// Close on link click
-navBar.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-        navBar.classList.remove('open');
-    });
-});
 
+if(hamburger && navBar){
+    hamburger.addEventListener('click', () => {
+        const isOpen = navBar.classList.toggle('open');
+
+        hamburger.classList.toggle('open', isOpen);
+        hamburger.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    // Close the menu when a navigation link is clicked
+    navBar.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navBar.classList.remove('open');
+            hamburger.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
+        });
+    });
+
+}
 // ============================
 // ACTIVE NAV HIGHLIGHT
 // ============================
@@ -213,21 +261,23 @@ window.addEventListener('scroll', () => {
 // ============================
 // TYPING EFFECT for hero subtitle
 // ============================
-const subtitle = document.querySelector('.hero-subtitle');
-if (subtitle) {
-    const original = subtitle.textContent;
-    subtitle.textContent = '';
-    let i = 0;
-    setTimeout(() => {
-        const type = setInterval(() => {
-            subtitle.textContent += original[i];
-            i++;
-            if (i >= original.length) clearInterval(type);
-        }, 35);
-    }, 700);
+
+if(!prefersReducedMotion){
+    const subtitle = document.querySelector('.hero-subtitle');
+    if (subtitle) {
+        const original = subtitle.textContent;
+        subtitle.textContent = '';
+        let i = 0;
+        setTimeout(() => {
+            const type = setInterval(() => {
+                subtitle.textContent += original[i];
+                i++;
+                if (i >= original.length) clearInterval(type);
+            }, 35);
+        }, 700);
+    }
+
 }
-
-
 //=======================
 // GENERATE PROJECTS
 //=======================
@@ -238,30 +288,7 @@ function initializeProjectEffects() {
     );
     // Tilt effect
     projectCards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            const cx = rect.width / 2;
-            const cy = rect.height / 2;
-
-            const rotX = ((y - cy) / cy) * -8;
-            const rotY = ((x - cx) / cx) * 8;
-
-            card.style.transform =
-                `perspective(600px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateZ(4px)`;
-        });
-
-        card.addEventListener('mouseleave', () => {
-            card.style.transform =
-                'perspective(600px) rotateX(0) rotateY(0) translateZ(0)';
-            card.style.transition = 'transform 0.5s ease';
-        });
-
-        card.addEventListener('mouseenter', () => {
-            card.style.transition =
-                'transform 0.1s ease, border-color 0.3s, box-shadow 0.3s';
-        });
+        addTiltEffect(card);
     });
 
     // Reveal animation
@@ -332,6 +359,16 @@ function initializeProjectFilters(projects) {
 // PROJECT DETAILS DIALOG
 // ============================
 
+
+function handleImageError(image, title) {
+    image.addEventListener('error', () => {
+        image.classList.add('image-error');
+        image.alt = `${title} image is unavailable`;
+        console.warn(`Failed to load image: ${image.src}`);
+    }, { once: true });
+}
+
+
 function setupProjectDialog() {
     const dialog = document.getElementById('project-dialog');
     const closeButton = dialog.querySelector('.dialog-close');
@@ -353,6 +390,8 @@ function setupProjectDialog() {
         document.body.append(dot, ring);
     });
 }
+
+
 
 
 function showProjectDetails(project) {
@@ -395,6 +434,77 @@ function showProjectDetails(project) {
 }
 
 
+async function loadSkills() {
+    const container = document.getElementById('skills-container');
+
+    try {
+        const response = await fetch('data/skills.json');
+
+        if (!response.ok) {
+            throw new Error('Failed to load skills');
+        }
+
+        const data = await response.json();
+
+        data.categories.forEach(category => {
+            // Category container
+            const categoryElement = document.createElement('div');
+            categoryElement.className = 'skills-category';
+
+            // Category title
+            const title = document.createElement('h3');
+            title.className = 'cat-title';
+
+            const categoryIcon = document.createElement('span');
+            categoryIcon.className = 'cat-icon';
+            categoryIcon.textContent = category.icon;
+
+            title.append(categoryIcon, document.createTextNode(category.title));
+
+            // Skills grid
+            const grid = document.createElement('div');
+            grid.className = 'skills-grid';
+
+            category.skills.forEach(skill => {
+                const card = document.createElement('div');
+                card.className = 'skill-card tilt-card reveal';
+
+                const icon = document.createElement('span');
+                icon.className = 'skill-icon';
+
+                if (skill.type === 'class') {
+                    const iconElement = document.createElement('i');
+                    iconElement.className = skill.icon;
+                    iconElement.setAttribute('aria-hidden', 'true');
+                    icon.appendChild(iconElement);
+                } else {
+                    icon.textContent = skill.icon;
+                }
+
+                const name = document.createElement('div');
+                name.className = 'skill-name';
+                name.textContent = skill.name;
+
+                card.append(icon, name);
+                grid.appendChild(card);
+
+                // Apply effects to dynamically created cards
+                observer.observe(card);
+
+                addTiltEffect(card);
+            });
+
+            categoryElement.append(title, grid);
+            container.appendChild(categoryElement);
+        });
+
+    } catch (error) {
+        console.error('Error loading skills:', error);
+        container.textContent = 'Unable to load skills right now.';
+    }
+}
+
+
 async function loadProjects() {
     const featuredGrid = document.getElementById("featured-project-grid");
     const otherGrid = document.getElementById("other-project-grid");
@@ -421,7 +531,8 @@ async function loadProjects() {
             image.src = project.image;
             image.alt = project.title;
             image.loading = "lazy";
-
+            handleImageError(image, project.title)
+ 
             // GitHub overlay
             const overlay = document.createElement("div");
             overlay.className = "project-overlay";
@@ -488,8 +599,97 @@ async function loadProjects() {
 }
 
 
+async function loadCertificates() {
+    const container = document.getElementById('certificates-grid');
+
+    try {
+        const response = await fetch('data/certificates.json');
+
+        if (!response.ok) {
+            throw new Error('Failed to load certificates');
+        }
+
+        const data = await response.json();
+
+        data.certificates.forEach(certificate => {
+            // Card
+            const card = document.createElement('div');
+            card.className = 'course-card tilt-card reveal';
+
+            // Certificate image
+            const image = document.createElement('img');
+            image.src = certificate.image;
+            image.alt = certificate.title;
+            image.loading = 'lazy';
+            handleImageError(image, certificate.title)
+
+            // Card body
+            const body = document.createElement('div');
+            body.className = 'course-body';
+
+            const provider = document.createElement('div');
+            provider.className = 'course-provider';
+            provider.textContent = certificate.provider;
+
+            const title = document.createElement('h3');
+            title.textContent = certificate.title;
+
+            const description = document.createElement('p');
+            description.textContent = certificate.description;
+
+            // Links
+            const links = document.createElement('div');
+            links.className = 'course-links';
+
+            if (certificate.courseUrl) {
+                const courseLink = document.createElement('a');
+                courseLink.href = certificate.courseUrl;
+                courseLink.target = '_blank';
+                courseLink.rel = 'noopener noreferrer';
+                courseLink.className = 'btn-course';
+                courseLink.textContent = 'Course';
+
+                links.appendChild(courseLink);
+            }
+
+            if (certificate.certificateUrl) {
+                const certificateLink = document.createElement('a');
+                certificateLink.href = certificate.certificateUrl;
+                certificateLink.target = '_blank';
+                certificateLink.rel = 'noopener noreferrer';
+                certificateLink.className = 'btn-course cert';
+                certificateLink.textContent = 'Certificate';
+
+                links.appendChild(certificateLink);
+            }
+
+            // Assemble card
+            body.append(provider, title, description);
+
+            if (links.children.length > 0) {
+                body.appendChild(links);
+            }
+
+            card.append(image, body);
+            container.appendChild(card);
+
+            // Reveal animation
+            observer.observe(card);
+
+            addTiltEffect(card);
+        });
+
+    } catch (error) {
+        console.error('Error loading certificates:', error);
+        container.textContent = 'Unable to load certificates.';
+    }
+}
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
     setupProjectDialog();
+    loadSkills();
     loadProjects();
+    loadCertificates();
 });

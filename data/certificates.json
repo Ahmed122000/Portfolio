@@ -1,0 +1,70 @@
+
+{
+    "certificates": [
+      {
+        "title": "Front End Web Developer & Digital Freelancing",
+        "provider": "Udacity",
+        "description": "HTML, CSS, JavaScript, SASS, Webpack, and freelancing fundamentals with hands-on projects.",
+        "image": "static/imgs/certifcates_padges/frone-end_freelancing.png",
+        "courseUrl": null,
+        "certificateUrl": null
+      },
+      {
+        "title": "SQL",
+        "provider": "365DataScience",
+        "description": "Database management and SQL queries for data science.",
+        "image": "static/imgs/certifcates_padges/sql.png",
+        "courseUrl": "https://learn.365datascience.com/courses/preview/sql/",
+        "certificateUrl": "https://learn.365datascience.com/c/a28ccd2a24/"
+      },
+      {
+        "title": "Introduction to AI & ML",
+        "provider": "Samsung Innovation",
+        "description": "Python, linear algebra, ML algorithms, deep learning with TensorFlow, and a graduation project.",
+        "image": "static/imgs/certifcates_padges/Samsung_Inovation_ML.jpeg",
+        "courseUrl": null,
+        "certificateUrl": null
+      },
+      {
+        "title": "Mathematics for Machine Learning",
+        "provider": "Coursera | Stanford",
+        "description": "Mathematical foundations connecting theory with machine learning and data science applications.",
+        "image": "static/imgs/certifcates_padges/mathematics-for-ml-certificate.png",
+        "courseUrl": "https://www.coursera.org/specializations/mathematics-machine-learning",
+        "certificateUrl": "https://coursera.org/share/add6e2a77dd3b59487643a2dce42b66e"
+      },
+      {
+        "title": "Machine Learning Specialization",
+        "provider": "Coursera | Stanford",
+        "description": "Machine learning fundamentals by DeepLearning.AI and Stanford Online.",
+        "image": "static/imgs/certifcates_padges/machine-learning_certificate.png",
+        "courseUrl": "https://www.coursera.org/specializations/machine-learning-introduction",
+        "certificateUrl": "https://coursera.org/share/d83d7b356bbe3909e87085fd22433c22"
+      },
+      {
+        "title": "Introduction to Recommender Systems",
+        "provider": "Coursera | University of Minnesota",
+        "description": "Non-personalized, demographic, and content-based filtering fundamentals.",
+        "image": "static/imgs/certifcates_padges/recommender-certificate.png",
+        "courseUrl": "https://www.coursera.org/learn/recommender-systems-introduction",
+        "certificateUrl": "https://coursera.org/share/e389870abfa31663c50c4b0e6a52b6db"
+      },
+      {
+        "title": "Applied Data Science Lab",
+        "provider": "WorldQuant University",
+        "description": "Eight end-to-end projects covering ETL pipelines, machine learning, SQL/NoSQL, APIs, and visualizations.",
+        "image": "static/imgs/certifcates_padges/applied-data-science-lab.png",
+        "courseUrl": "https://www.wqu.edu/adsl-apply",
+        "certificateUrl": "https://www.credly.com/badges/a8439d6e-6ba8-4a6e-bd30-aa454d5ac5b4/public_url"
+      },
+      {
+        "title": "Linux Administration",
+        "provider": "MaharaTech | ITI Mooca",
+        "description": "Linux fundamentals and system administration.",
+        "image": "static/imgs/certifcates_padges/linux-administration.png",
+        "courseUrl": null,
+        "certificateUrl": null
+      }
+    ]
+  }
+  
