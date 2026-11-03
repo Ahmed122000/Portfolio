@@ -1,0 +1,36 @@
+{
+    "books": [
+        {
+            "title": "Grokking Algorithms",
+            "author": ["Aditya Bhargava"],
+            "readingStatus": "completed",
+            "tags": ["Algorithms"],
+            "cover": "static/imgs/books/grokking-algorithms.jpeg",
+            "url": "https://www.oreilly.com/library/view/grokking-algorithms/9781617292231/"
+        },
+        {
+            "title": "Head First Object-Oriented Analysis and Design: A Brain Friendly Guide to OOA&D",
+            "author": ["Brett McLaughlin", "Gary Pollice", "David West"],
+            "readingStatus": "completed",
+            "tags": ["OOP", "Java", "Analysis & Design"],
+            "cover": "static/imgs/books/headfirstoop.jpeg",
+            "url": "https://www.oreilly.com/library/view/head-first-object-oriented/0596008678/"
+        },
+        {
+            "title": "Head First Java",
+            "author": ["Kathy Sierra", "Bert Bates", "Trisha Gee"],
+            "readingStatus": "currently-reading",
+            "tags": ["Java", "OOP", "Threads", "GUI", "Networking", "Collections"],
+            "cover": "static/imgs/books/headfirstjava.jpeg",
+            "url": "https://www.oreilly.com/library/view/head-first-java/9781492091646/"
+        },
+        {
+            "title": "Designing Data-Intensive Applications",
+            "author": ["Martin Kleppmann"],
+            "readingStatus": "currently-reading",
+            "tags": ["System Design", "Data Systems", "Distributed Systems"],
+            "cover": "static/imgs/books/designingdataintensiveapplication.jpg",
+            "url": "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/"
+        }
+    ]
+}
