@@ -1,0 +1,29 @@
+
+{
+    "articles": [
+        {
+            "title": "Understanding SQL Joins",
+            "description": "Explore how SQL joins work, how to retrieve related data from multiple tables, and the differences between INNER, LEFT, RIGHT, and FULL OUTER JOIN.",
+            "date": "27/9/2026",
+            "tags": ["SQL", "Database", "Joins"],
+            "image": "static/imgs/articles_thumbnails/sql_join_thumbnail.png",
+            "url": "https://medium.com/@ahmedhesham122000/sql-joins-explained-how-tables-meet-in-a-relational-database-ef1ef7c836db"
+        },
+        {
+            "title": "SQL Command Categories Explained",
+            "description": "A beginner-friendly introduction to SQL command categories: DDL, DML, DQL, DCL, and TCL, with examples explaining the purpose of each category.",
+            "date": "29/9/2026",
+            "tags": ["SQL", "Database", "Fundamentals"],
+            "image": "static/imgs/articles_thumbnails/sql_commad_category_thumbnail.png",
+            "url": "https://medium.com/@ahmedhesham122000/sql-command-categories-explained-ddl-dml-dql-dcl-tcl-c67c37c38656"
+        },
+        {
+            "title": "Database Indexing: Understanding How Indexes Work",
+            "description": "Explore database indexes, how they improve query performance, and the trade-offs involved. Learn about B-Tree-based and Hash indexes and when each can be useful.",
+            "date": "25/10/2026",
+            "tags": ["SQL", "Database", "Indexing", "Performance"],
+            "image": "static/imgs/articles_thumbnails/sql_index_thumbnail.png",
+            "url": "https://medium.com/@ahmedhesham122000/sql-indexes-explained-b-trees-vs-hash-indexes-how-do-they-work-8bbf41b78bdf"
+        }
+    ]
+}

@@ -36,6 +36,7 @@
                 <li><a href="#education">Education</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
+                <li><a href="#articles">Articles</a></li>
                 <li><a href="#courses">Courses</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -238,11 +239,74 @@
         </div>
     </dialog>
 
-    
+
+<!-- Certificate Details Dialog -->
+<dialog id="certificate-dialog" class="project-dialog">
+    <div class="dialog-content">
+        <button
+            type="button"
+            class="dialog-close"
+            aria-label="Close certificate details"
+        >
+            &times;
+        </button>
+
+        <h2 id="certificate-dialog-title"></h2>
+
+        <p id="certificate-dialog-provider" class="course-provider"></p>
+
+        <div id="certificate-dialog-image-section">
+            <img
+                id="certificate-dialog-image"
+                class="certificate-preview"
+                src=""
+                alt="Certificate preview"
+            >
+        </div>
+
+        <p id="certificate-dialog-date" class="certificate-date"></p>
+
+        <div class="dialog-section">
+            <h3>About This Course</h3>
+            <p id="certificate-dialog-description"></p>
+        </div>
+
+        <div class="dialog-section" id="certificate-skills-section" hidden>
+            <h3>Skills Covered</h3>
+            <ul id="certificate-dialog-skills"></ul>
+        </div>
+
+        <div class="dialog-section" id="certificate-projects-section" hidden>
+            <h3>Related Projects</h3>
+            <div id="certificate-dialog-projects"></div>
+        </div>
+
+        <div id="certificate-dialog-links" class="course-links"></div>
+    </div>
+</dialog>
+
+<!---------- Articles ---------->
+<section id="articles" class="section">
+    <div class="section-inner">
+        <div class="section-label">05 / Articles</div>
+
+        <h2 class="section-title">
+            Technical <span class="accent">Articles</span>
+        </h2>
+
+        <p class="articles-intro">
+            I enjoy sharing what I learn about software development,
+            backend engineering, and databases through technical articles.
+        </p>
+
+        <div id="articles-grid" class="articles-grid"></div>
+    </div>
+</section>
+
     <!---------- Courses ---------->
     <section id="courses" class="section">
         <div class="section-inner">
-            <div class="section-label">05 / Courses</div>
+            <div class="section-label">06 / Courses</div>
             <h2 class="section-title">
                 Courses & <span class="accent">Certificates</span>
             </h2>
@@ -254,7 +318,7 @@
     <!---------- Contact ---------->
     <section id="contact" class="section alt-bg">
         <div class="section-inner">
-            <div class="section-label">06 / Contact</div>
+            <div class="section-label">07 / Contact</div>
             <h2 class="section-title">Get In <span class="accent">Touch</span></h2>
             <p class="contact-intro">
                 Interested in working together or have an opportunity in mind?

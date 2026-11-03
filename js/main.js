@@ -3,14 +3,15 @@ const prefersReducedMotion = window.matchMedia(
     '(prefers-reduced-motion: reduce)'
 ).matches;
 
+// Keep these available to the other functions
+const dot = document.querySelector('.cursor-dot');
+const ring = document.querySelector('.cursor-ring');
+
 // ============================
 // CUSTOM CURSOR
 // ============================
 
-if(!prefersReducedMotion){
-    const dot = document.querySelector('.cursor-dot');
-    const ring = document.querySelector('.cursor-ring');
-
+if (!prefersReducedMotion && dot && ring) {
     let mouseX = 0;
     let mouseY = 0;
     let ringX = 0;
@@ -24,9 +25,10 @@ if(!prefersReducedMotion){
         ring.style.left = ringX + 'px';
         ring.style.top = ringY + 'px';
 
-        // Stop when the ring is close enough to the mouse
-        if (Math.abs(mouseX - ringX) > 0.1 ||
-            Math.abs(mouseY - ringY) > 0.1) {
+        if (
+            Math.abs(mouseX - ringX) > 0.1 ||
+            Math.abs(mouseY - ringY) > 0.1
+        ) {
             cursorAnimationId = requestAnimationFrame(animateCursor);
         } else {
             cursorAnimationId = null;
@@ -41,12 +43,11 @@ if(!prefersReducedMotion){
         dot.style.top = mouseY + 'px';
 
         const hoverTarget = e.target.closest(
-        'a, button, .skill-card, .project-card, .course-card, .contact-card, #project-dialog'
+            'a, button, .skill-card, .project-card, .course-card, .contact-card, #project-dialog, #certificate-dialog'
         );
 
         ring.classList.toggle('hovering', Boolean(hoverTarget));
 
-        // Start animation only if one isn't already running
         if (cursorAnimationId === null) {
             cursorAnimationId = requestAnimationFrame(animateCursor);
         }
@@ -297,11 +298,13 @@ function initializeProjectEffects() {
         observer.observe(card);
     });
 
-    // Custom cursor
-    projectCards.forEach(card => {
-        card.addEventListener('mouseenter', () => ring.classList.add('hovering'));
-        card.addEventListener('mouseleave', () => ring.classList.remove('hovering'));
-    });
+    if(ring){
+        // Custom cursor
+        projectCards.forEach(card => {
+            card.addEventListener('mouseenter', () => ring.classList.add('hovering'));
+            card.addEventListener('mouseleave', () => ring.classList.remove('hovering'));
+        });
+    }
 }
 
 
@@ -391,7 +394,150 @@ function setupProjectDialog() {
     });
 }
 
+function setupCertificateDialog() {
+    const dialog = document.getElementById('certificate-dialog');
+    const closeButton = dialog.querySelector('.dialog-close');
 
+    // Close using the X button
+    closeButton.addEventListener('click', () => {
+        dialog.close();
+    });
+
+    // Close when clicking outside the dialog content
+    dialog.addEventListener('click', (event) => {
+        if (event.target === dialog) {
+            dialog.close();
+        }
+    });
+    
+    dialog.addEventListener('close', () => {
+        document.body.append(dot, ring);
+    });
+}
+
+
+function showCertificateDetails(certificate) {
+    const dialog = document.getElementById('certificate-dialog');
+
+    // Fill basic information
+    document.getElementById('certificate-dialog-title').textContent =
+        certificate.title;
+
+    document.getElementById('certificate-dialog-provider').textContent =
+        certificate.provider;
+
+    document.getElementById('certificate-dialog-description').textContent =
+        certificate.description;
+
+        // Certificate image
+    const imageSection = document.getElementById(
+        'certificate-dialog-image-section'
+    );
+    const certificateImage = document.getElementById(
+        'certificate-dialog-image'
+    );
+
+    if (certificate.image) {
+        certificateImage.src = certificate.image;
+        certificateImage.alt = `${certificate.title} certificate`;
+        imageSection.hidden = false;
+
+        certificateImage.onerror = () => {
+            imageSection.hidden = true;
+        };
+    } else {
+        certificateImage.removeAttribute('src');
+        imageSection.hidden = true;
+    }
+
+    // Issue date
+    const dateElement = document.getElementById(
+        'certificate-dialog-date'
+    );
+
+    if (certificate.issueDate) {
+        const date = new Date(`${certificate.issueDate}T00:00:00`);
+
+        dateElement.textContent = `Issued on: ${date.toLocaleDateString(
+            'en-US',
+            {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            }
+        )}`;
+
+        dateElement.hidden = false;
+    } else {
+        dateElement.textContent = '';
+        dateElement.hidden = true;
+    }
+    // Skills section
+    const skillsSection = document.getElementById('certificate-skills-section');
+    const skillsList = document.getElementById('certificate-dialog-skills');
+
+    skillsList.replaceChildren();
+
+    if (certificate.skills?.length) {
+        certificate.skills.forEach(skill => {
+            const item = document.createElement('li');
+            item.textContent = skill;
+            skillsList.appendChild(item);
+        });
+
+        skillsSection.hidden = false;
+    } else {
+        skillsSection.hidden = true;
+    }
+
+    // Related projects section
+    const projectsSection = document.getElementById('certificate-projects-section');
+    const projectsContainer = document.getElementById('certificate-dialog-projects');
+
+    projectsContainer.replaceChildren();
+
+    if (certificate.relatedProjects?.length) {
+        certificate.relatedProjects.forEach(project => {
+            const item = document.createElement('p');
+            item.textContent = project;
+            projectsContainer.appendChild(item);
+        });
+
+        projectsSection.hidden = false;
+    } else {
+        projectsSection.hidden = true;
+    }
+
+    // Course and certificate links
+    const linksContainer = document.getElementById('certificate-dialog-links');
+    linksContainer.replaceChildren();
+
+    if (certificate.courseUrl) {
+        const courseLink = document.createElement('a');
+        courseLink.href = certificate.courseUrl;
+        courseLink.target = '_blank';
+        courseLink.rel = 'noopener noreferrer';
+        courseLink.className = 'btn-course';
+        courseLink.textContent = 'Course';
+
+        linksContainer.appendChild(courseLink);
+    }
+
+    if (certificate.certificateUrl) {
+        const certificateLink = document.createElement('a');
+        certificateLink.href = certificate.certificateUrl;
+        certificateLink.target = '_blank';
+        certificateLink.rel = 'noopener noreferrer';
+        certificateLink.className = 'btn-course cert';
+        certificateLink.textContent = 'Certificate';
+
+        linksContainer.appendChild(certificateLink);
+    }
+
+    // Move custom cursor inside the modal
+    dialog.append(dot, ring);
+    dialog.showModal();
+}
 
 
 function showProjectDetails(project) {
@@ -599,6 +745,107 @@ async function loadProjects() {
 }
 
 
+
+// ============================
+// LOAD ARTICLES
+// ============================
+
+async function loadArticles() {
+    const container = document.getElementById('articles-grid');
+
+    if (!container) return;
+
+    try {
+        const response = await fetch('data/articles.json');
+
+        if (!response.ok) {
+            throw new Error('Failed to load articles');
+        }
+
+        const data = await response.json();
+
+        if (!Array.isArray(data.articles)) {
+            throw new Error('Invalid articles data format');
+        }
+
+        if (data.articles.length === 0) {
+            container.textContent = 'Articles coming soon.';
+            return;
+        }
+
+        data.articles.forEach(article => {
+            const card = document.createElement('article');
+            card.className = 'article-card reveal';
+
+            // Article image
+            if (article.image) {
+                const image = document.createElement('img');
+                image.src = article.image;
+                image.alt = article.title;
+                image.loading = 'lazy';
+                image.className = 'article-image';
+
+                // Hide image if the file doesn't exist
+                image.onerror = () => image.remove();
+
+                card.appendChild(image);
+            }
+
+            // Publication date
+            if (article.date) {
+                const date = document.createElement('span');
+                date.className = 'article-date';
+                date.textContent = article.date;
+                card.appendChild(date);
+            }
+
+            // Article title
+            const title = document.createElement('h3');
+            title.textContent = article.title;
+
+            // Article description
+            const description = document.createElement('p');
+            description.textContent = article.description;
+
+            card.append(title, description);
+
+            // Article tags
+            if (Array.isArray(article.tags) && article.tags.length > 0) {
+                const tagsList = document.createElement('ul');
+                tagsList.className = 'article-tags';
+
+                article.tags.forEach(tag => {
+                    const item = document.createElement('li');
+                    item.textContent = tag;
+                    tagsList.appendChild(item);
+                });
+
+                card.appendChild(tagsList);
+            }
+
+            // Read article link
+            const link = document.createElement('a');
+            link.className = 'article-link';
+            link.href = article.url;
+            link.target = '_blank';
+            link.rel = 'noopener noreferrer';
+            link.textContent = 'Read Article →';
+
+            card.appendChild(link);
+            container.appendChild(card);
+
+            // Scroll reveal
+            observer.observe(card);
+            addTiltEffect(card);
+        });
+
+    } catch (error) {
+        console.error('Error loading articles:', error);
+        container.textContent = 'Unable to load articles.';
+    }
+}
+
+
 async function loadCertificates() {
     const container = document.getElementById('certificates-grid');
 
@@ -664,6 +911,7 @@ async function loadCertificates() {
             }
 
             // Assemble card
+            // Assemble card
             body.append(provider, title, description);
 
             if (links.children.length > 0) {
@@ -672,6 +920,30 @@ async function loadCertificates() {
 
             card.append(image, body);
             container.appendChild(card);
+
+            // Make the card open its details dialog
+            card.setAttribute('role', 'button');
+            card.setAttribute('tabindex', '0');
+            card.setAttribute('aria-label', `View details for ${certificate.title}`);
+
+            card.addEventListener('click', () => {
+                showCertificateDetails(certificate);
+            });
+
+            // Support keyboard interaction
+            card.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    showCertificateDetails(certificate);
+                }
+            });
+
+            // Prevent clicking external links from opening the dialog
+            links.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', event => {
+                    event.stopPropagation();
+                });
+            });
 
             // Reveal animation
             observer.observe(card);
@@ -689,7 +961,9 @@ async function loadCertificates() {
 
 document.addEventListener("DOMContentLoaded", () => {
     setupProjectDialog();
+    setupCertificateDialog();
     loadSkills();
     loadProjects();
+    loadArticles();
     loadCertificates();
 });

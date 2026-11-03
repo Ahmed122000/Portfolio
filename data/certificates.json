@@ -6,14 +6,20 @@
         "provider": "Udacity",
         "description": "HTML, CSS, JavaScript, SASS, Webpack, and freelancing fundamentals with hands-on projects.",
         "image": "static/imgs/certifcates_padges/frone-end_freelancing.png",
-        "courseUrl": null,
-        "certificateUrl": null
+        "issueDate": "2024-08-24",
+        "skills": ["Front end Development", "HTML", "CSS", "JS", "WEBPACK", "Responsive Design"],
+        "relatedProjects": [],
+        "courseUrl": "https://www.udacity.com/enrollment/nd0011-ilo",
+        "certificateUrl": "www.udacity.com/certificate/e/550fa8b0-6dc5-11ef-9d05-8b07d0dd4bdd"
       },
       {
         "title": "SQL",
         "provider": "365DataScience",
         "description": "Database management and SQL queries for data science.",
         "image": "static/imgs/certifcates_padges/sql.png",
+        "issueDate": "2024-11-19",
+        "skills": ["SQL"],
+        "relatedProjects": [],
         "courseUrl": "https://learn.365datascience.com/courses/preview/sql/",
         "certificateUrl": "https://learn.365datascience.com/c/a28ccd2a24/"
       },
@@ -22,6 +28,9 @@
         "provider": "Samsung Innovation",
         "description": "Python, linear algebra, ML algorithms, deep learning with TensorFlow, and a graduation project.",
         "image": "static/imgs/certifcates_padges/Samsung_Inovation_ML.jpeg",
+        "issueDate": "2021-12-10",
+        "skills": ["Data Science", "Machine Learning", "Deep Learning", "Supervised Algorithms", "Unsupervised Algorithms", "Clustering"],
+        "relatedProjects": [],
         "courseUrl": null,
         "certificateUrl": null
       },
@@ -30,6 +39,9 @@
         "provider": "Coursera | Stanford",
         "description": "Mathematical foundations connecting theory with machine learning and data science applications.",
         "image": "static/imgs/certifcates_padges/mathematics-for-ml-certificate.png",
+        "issueDate": "2022-09-03",
+        "skills": ["Linear Algebra", "Calculas"],
+        "relatedProjects": [],
         "courseUrl": "https://www.coursera.org/specializations/mathematics-machine-learning",
         "certificateUrl": "https://coursera.org/share/add6e2a77dd3b59487643a2dce42b66e"
       },
@@ -38,6 +50,9 @@
         "provider": "Coursera | Stanford",
         "description": "Machine learning fundamentals by DeepLearning.AI and Stanford Online.",
         "image": "static/imgs/certifcates_padges/machine-learning_certificate.png",
+        "issueDate": "2023-09-15",
+        "skills": ["Python", "Machine Learning", "Supervised Algorithms", "Unsupervised Algorithms", "Reinforciement Learning", "Sciki-Learn"],
+        "relatedProjects": [],
         "courseUrl": "https://www.coursera.org/specializations/machine-learning-introduction",
         "certificateUrl": "https://coursera.org/share/d83d7b356bbe3909e87085fd22433c22"
       },
@@ -46,6 +61,9 @@
         "provider": "Coursera | University of Minnesota",
         "description": "Non-personalized, demographic, and content-based filtering fundamentals.",
         "image": "static/imgs/certifcates_padges/recommender-certificate.png",
+        "issueDate": "2024-02-25",
+        "skills": ["Python", "Recommendation systems"],
+        "relatedProjects": [],
         "courseUrl": "https://www.coursera.org/learn/recommender-systems-introduction",
         "certificateUrl": "https://coursera.org/share/e389870abfa31663c50c4b0e6a52b6db"
       },
@@ -54,6 +72,9 @@
         "provider": "WorldQuant University",
         "description": "Eight end-to-end projects covering ETL pipelines, machine learning, SQL/NoSQL, APIs, and visualizations.",
         "image": "static/imgs/certifcates_padges/applied-data-science-lab.png",
+        "issueDate": "2023-09-28",
+        "skills": ["Data Science", "Machine Learning", "Supervised Algorithms", "Unsupervised Algorithms", "Python", "Scitkit-learn"],
+        "relatedProjects": [],
         "courseUrl": "https://www.wqu.edu/adsl-apply",
         "certificateUrl": "https://www.credly.com/badges/a8439d6e-6ba8-4a6e-bd30-aa454d5ac5b4/public_url"
       },
@@ -61,9 +82,12 @@
         "title": "Linux Administration",
         "provider": "MaharaTech | ITI Mooca",
         "description": "Linux fundamentals and system administration.",
-        "image": "static/imgs/certifcates_padges/linux-administration.png",
-        "courseUrl": null,
-        "certificateUrl": null
+        "image": "static/imgs/certifcates_padges/linux_admin.png",
+        "issueDate": "2026-09-01",
+        "skills": ["Linux", "Linux administration", "RedHat Linux"],
+        "relatedProjects": [],
+        "courseUrl": "https://maharatech.gov.eg/course/view.php?id=2115",
+        "certificateUrl": "https://maharatech.gov.eg/mod/customcert/verify_certificate.php?code=NfuCDKbnBF&qrcode=1"
       }
     ]
   }
