@@ -1,0 +1,129 @@
+/* ===========================
+   CUSTOM CURSOR
+   =========================== */
+
+   @media (max-width: 768px) {
+    .cursor-dot, .cursor-ring { display: none; }
+    body { cursor: auto; }
+}
+
+/* ============================
+   REDUCED MOTION ACCESSIBILITY
+   ============================ */
+
+   @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .cursor-dot,
+    .cursor-ring {
+        display: none !important;
+    }
+
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+
+    .tilt-card {
+        transform: none !important;
+    }
+}
+
+
+/* ===========================
+   Nav Bar
+   =========================== */
+   @media (max-width: 768px) {
+    .nav-bar { display: none; }
+    .nav-bar.open {
+        display: flex;
+        position: absolute;
+        top: 70px; left: 0; right: 0;
+        background: var(--bg);
+        border-bottom: 1px solid var(--border);
+        padding: 16px;
+    }
+    .nav-bar.open ul { flex-direction: column; gap: 4px; }
+    .hamburger { display: flex; }
+    #main-header { padding: 0 20px; }
+    .section { padding: 70px 20px; }
+    .skills-grid { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+    .footer-inner { flex-direction: column; align-items: center; text-align: center; }
+    .back-to-top { bottom: 20px; right: 20px; }
+}
+
+/* ===========================
+   HERO section
+   =========================== */
+   @media (max-width: 900px) {
+    .hero-content { flex-direction: column; text-align: center; gap: 40px; }
+    .hero-img-wrapper img { width: 200px; height: 240px; }
+    .hero-tags { justify-content: center; }
+    .hero-actions { justify-content: center; }
+    .about-grid { grid-template-columns: 1fr; }
+    .about-img-frame { margin: 0 auto; }
+    .edu-card { grid-template-columns: 1fr; }
+}
+
+
+/* ===========================
+   PROJECTS
+   =========================== */
+
+
+/* Always show project links on touch devices */
+@media (hover: none) {
+    .project-overlay {
+        opacity: 1;
+        background: rgba(10, 13, 20, 0.35);
+        backdrop-filter: none;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .dialog-content {
+        padding: 25px 20px;
+    }
+}
+
+/* ============================
+   BOOKSHELF SECTION
+============================ */
+
+@media (max-width: 600px) {
+    .books-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .book-card {
+        padding: 12px;
+    }
+
+    .book-cover {
+        height: 180px;
+    }
+
+    .book-info h3 {
+        font-size: 0.85rem;
+    }
+
+    .bookshelf-filters {
+        gap: 8px;
+    }
+
+    .book-filter {
+        padding: 8px 12px;
+        font-size: 0.68rem;
+    }
+}
+

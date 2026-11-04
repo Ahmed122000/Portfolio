@@ -1,0 +1,70 @@
+/* ===========================
+   3D TILT CARDS
+   =========================== */
+   .tilt-card { will-change: transform; }
+
+   /* ===========================
+      SCROLL REVEAL
+      =========================== */
+   .reveal {
+       opacity: 0;
+       transform: translateY(30px);
+       transition: opacity 0.7s ease, transform 0.7s ease;
+   }
+   .reveal.visible {
+       opacity: 1;
+       transform: translateY(0);
+   }
+   
+
+
+/* ===========================
+   PARTICLE CANVAS
+   =========================== */
+   #particle-canvas {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+/* ===========================
+   CUSTOM CURSOR
+   =========================== */
+.cursor-dot {
+    width: 6px; height: 6px;
+    background: var(--accent);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.05s;
+}
+.cursor-ring {
+    width: 36px; height: 36px;
+    border: 1.5px solid var(--accent);
+    border-radius: 50%;
+    position: fixed;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: transform 0.12s ease, width 0.2s, height 0.2s, opacity 0.2s;
+    opacity: 0.5;
+}
+.cursor-ring.hovering {
+    width: 60px; height: 60px;
+    opacity: 0.3;
+    background: var(--glow);
+}
+
+/*  ===========================
+    Image Error
+    =========================== */
+    .image-error {
+        opacity: 0.25;
+        filter: grayscale(1);
+        background: var(--surface);
+    }
+    
