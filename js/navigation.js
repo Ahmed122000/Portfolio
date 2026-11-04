@@ -53,25 +53,36 @@ function setupActiveNavigation() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-bar a');
 
-    window.addEventListener('scroll', () => {
+    function updateActiveLink() {
         let current = '';
 
-        sections.forEach(sec => {
-            if (window.scrollY >= sec.offsetTop - 100) {
-                current = sec.id;
+        sections.forEach(section => {
+            if (window.scrollY >= section.offsetTop - 100) {
+                current = section.id;
             }
         });
 
         navLinks.forEach(link => {
-            link.style.color = '';
+            const isActive = link.getAttribute('href') === `#${current}`;
 
-            if (link.getAttribute('href') === '#' + current) {
-                link.style.color = 'var(--accent)';
+            link.classList.toggle('active', isActive);
+
+            if (isActive) {
+                link.setAttribute('aria-current', 'location');
+            } else {
+                link.removeAttribute('aria-current');
             }
         });
+    }
+
+    // Initialize immediately
+    updateActiveLink();
+
+    // Update while scrolling
+    window.addEventListener('scroll', updateActiveLink, {
+        passive: true
     });
 }
-
 
 // ============================
 // HERO TYPING EFFECT

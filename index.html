@@ -1,22 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Portfolio of Ahmed Hesham - Software Engineer">
-    <meta name="author" content="Ahmed Hesham">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahmed Hesham — Software Engineer</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <!-- Open Graph / Twitter Card -->
-    <meta property="og:title" content="Ahmed Hesham — Software Engineer">
-    <meta property="og:description" content="A modern responsive portfolio showcasing projects, certifications and skills in web development and ML.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/Ahmed122000/Portfolio/main/static/imgs/hero_section.png">
+
+    <!-- Primary SEO -->
+    <title>Ahmed Hesham | Software Engineer & Backend Developer</title>
+    <meta
+        name="description"
+        content="Explore Ahmed Hesham's portfolio, featuring backend development projects, Java, Spring Boot, Python, databases, and software engineering experience."
+    >
+    <meta name="author" content="Ahmed Hesham">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0d14">
+
+    <!-- Canonical URL -->
+    <link
+        rel="canonical"
+        href="https://ahmed122000.github.io/Portfolio/"
+    >
+
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Ahmed Hesham Portfolio">
+    <meta property="og:title" content="Ahmed Hesham | Software Engineer & Backend Developer">
+    <meta
+        property="og:description"
+        content="Explore my software engineering portfolio, featuring backend development projects, Java, Spring Boot, Python, and more."
+    >
+    <meta
+        property="og:url"
+        content="https://ahmed122000.github.io/Portfolio/"
+    >
+    <meta
+        property="og:image"
+        content="https://raw.githubusercontent.com/Ahmed122000/Portfolio/main/static/imgs/hero_section.png"
+    >
+    <meta property="og:image:alt" content="Ahmed Hesham's software engineering portfolio">
+
+    <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image">
-    <!-- Favicon (temporary: hero image) -->
-    <link rel="icon" type="image/png" href="/static/imgs/hero_section.png">
+    <meta name="twitter:title" content="Ahmed Hesham | Software Engineer & Backend Developer">
+    <meta
+        name="twitter:description"
+        content="Explore my projects and experience in backend development, Java, Spring Boot, Python, and software engineering."
+    >
+    <meta
+        name="twitter:image"
+        content="https://raw.githubusercontent.com/Ahmed122000/Portfolio/main/static/imgs/hero_section.png"
+    >
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="static/imgs/hero_section.png">
+
+    <!-- Performance: external resource connections -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    >
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap"
+        rel="stylesheet"
+    >
 </head>
+
 <body>
 
 <!-- Particle canvas background -->
@@ -42,9 +96,17 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <div class="hamburger" id="hamburger" role="button" tabindex="0" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation">
-            <span></span><span></span><span></span>
-        </div>
+        <button 
+        type="button" 
+        class="hamburger" 
+        id="hamburger" 
+        aria-expanded="false" 
+        aria-controls="main-nav" 
+        aria-label="Toggle navigation">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </div>
 </header>
 
@@ -180,28 +242,33 @@
     <section id="projects" class="section alt-bg">
         <div class="section-inner">
             <div class="section-label">04 / Projects</div>
-    
-        <div id="project-filters" class="project-filters"
-            aria-label="Filter projects by category">
-        </div>
 
-            <h2 class="section-title">
-                Featured <span class="accent">Projects</span>
-            </h2>
-            
+<h2 class="section-title">
+    My <span class="accent">Projects</span>
+</h2>
 
-            
-            <div id="featured-project-grid"></div>
-    
-            <h2 class="section-title other-projects-title">
-                Other <span class="accent">Projects</span>
-            </h2>
-    
-            <div id="other-project-grid"></div>
+<div
+    id="project-filters"
+    class="project-filters"
+    role="group"
+    aria-label="Filter projects by category">
+</div>
+
+<h3 class="section-title">
+    Featured <span class="accent">Projects</span>
+</h3>
+
+<div id="featured-project-grid"></div>
+
+<h3 class="section-title other-projects-title">
+    Other <span class="accent">Projects</span>
+</h3>
+
+<div id="other-project-grid"></div>
         </div>
     </section>
 
-    <dialog id="project-dialog" class="project-dialog">
+    <dialog id="project-dialog" class="project-dialog" aria-labelledby="dialog-title">
         <div class="dialog-content">
             <button
                 type="button"
