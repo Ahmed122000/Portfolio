@@ -149,6 +149,17 @@ function showProjectDetails(project) {
     const githubLink = document.getElementById('dialog-github');
     githubLink.href = project.github;
 
+    // Set Demo link
+    const demoLink = document.getElementById('dialog-demo');
+
+    if (project.demo) {
+        demoLink.href = project.demo;
+        demoLink.hidden = false;
+    } else {
+        demoLink.hidden = true;
+        demoLink.removeAttribute('href');
+    }
+
     // Move custom cursor inside the modal
     dialog.append(dot, ring);
 
@@ -189,10 +200,11 @@ export async function loadProjects() {
             image.loading = 'lazy';
             handleImageError(image, project.title);
 
-            // GitHub overlay
+            // Project links overlay
             const overlay = document.createElement('div');
             overlay.className = 'project-overlay';
 
+            // GitHub link
             const githubLink = document.createElement('a');
             githubLink.href = project.github;
             githubLink.target = '_blank';
@@ -202,9 +214,25 @@ export async function loadProjects() {
             const githubIcon = document.createElement('i');
             githubIcon.className = 'fab fa-github';
             githubIcon.setAttribute('aria-hidden', 'true');
-            githubLink.append(githubIcon, document.createTextNode(' GitHub'));
 
+            githubLink.append(githubIcon, document.createTextNode(' GitHub'));
             overlay.appendChild(githubLink);
+
+            // Demo link (only if available)
+            if (project.demo) {
+                const demoLink = document.createElement('a');
+                demoLink.href = project.demo;
+                demoLink.target = '_blank';
+                demoLink.rel = 'noopener noreferrer';
+                demoLink.className = 'overlay-btn';
+
+                const demoIcon = document.createElement('i');
+                demoIcon.className = 'fas fa-external-link-alt';
+                demoIcon.setAttribute('aria-hidden', 'true');
+
+                demoLink.append(demoIcon, document.createTextNode(' Demo'));
+                overlay.appendChild(demoLink);
+            }
             imageWrap.append(image, overlay);
 
             // Project information
