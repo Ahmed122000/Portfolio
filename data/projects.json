@@ -135,5 +135,32 @@
         "Webpack",
         "MeaningCloud API"
       ]
+    },
+    {
+      "title": "QR Code Generator",
+      "category": "Python Tools",
+      "featured": false,
+      "image": "static/imgs/projects/qr_generator.png",
+      "github": "https://github.com/Ahmed122000/QR-Code-Generator",
+      "demo": "https://pypi.org/project/qr-generator-cli/",
+      "description": "A customizable QR code generator distributed as a Python package on PyPI, featuring a command-line interface for generating QR codes from URLs and text.",
+      "problem": "Generating customized QR codes often requires writing scripts or using online tools with limited customization options.",
+      "solution": "Developed a reusable Python package with a command-line interface that generates QR codes with custom colors, optional center icons, and flexible output settings.",
+      "technicalHighlights": [
+        "Python package development and PyPI distribution",
+        "Command-line interface using argparse",
+        "Input validation and error handling",
+        "Custom QR code generation and image processing",
+        "Automated testing with Pytest",
+        "99% test coverage"
+      ],
+      "technologies": [
+        "Python",
+        "Pillow",
+        "qrcode",
+        "Argparse",
+        "Pytest",
+        "PyPI"
+      ]
     }
   ]
