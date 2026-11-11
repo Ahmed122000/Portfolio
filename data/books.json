@@ -31,6 +31,14 @@
             "tags": ["System Design", "Data Systems", "Distributed Systems"],
             "cover": "static/imgs/books/designingdataintensiveapplication.jpg",
             "url": "https://www.oreilly.com/library/view/designing-data-intensive-applications/9781491903063/"
+        },
+        {
+           "title": "Head first designing Patterns", 
+           "author": [ "Eric Freeman", "Elisabeth Robson", "Bert Bates", "Kathy Sierra"],
+           "readingStatus": "currently-reading",
+           "tags":["Java", "Design Patterns", "OOP"], 
+           "cover": "static/imgs/books/head-first-design-patterns.jpeg", 
+           "url": "https://www.oreilly.com/library/view/head-first-design/9781492077992/"
         }
-    ]
+  ]
 }
