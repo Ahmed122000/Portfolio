@@ -1,31 +1,61 @@
 [
   {
-    "title": "QR Code Generator",
-    "category": "Python Tools",
-    "featured": false,
+    "title": "SAH QR Code Generator",
+    "category": "Backend",
+    "featured": true,
     "image": "static/imgs/projects/qr_generator.png",
     "github": "https://github.com/Ahmed122000/QR-Code-Generator",
-    "demo": "https://pypi.org/project/qr-generator-cli/",
-    "description": "A customizable QR code generator distributed as a Python package on PyPI, featuring a command-line interface for generating QR codes from URLs and text.",
-    "problem": "Generating customized QR codes often requires writing scripts or using online tools with limited customization options.",
-    "solution": "Developed a reusable Python package with a command-line interface that generates QR codes with custom colors, optional center icons, and flexible output settings.",
+    "demo": "https://sah-qr-generator.onrender.com/",
+    "description": "A QR code generation project consisting of a reusable Python library published on PyPI and a web application built with FastAPI.",
+    "problem": "Generating customized QR codes programmatically requires reusable generation logic, while making that functionality accessible to non-developers requires a simple web interface.",
+    "solution": "Developed and published a reusable Python QR generation package with CLI and Python API support, then integrated it into a FastAPI web application that allows users to generate, preview, customize, and download QR codes.",
     "technicalHighlights": [
-      "Python package development and PyPI distribution",
-      "Command-line interface using argparse",
-      "Input validation and error handling",
-      "Custom QR code generation and image processing",
-      "Automated testing with Pytest",
-      "99% test coverage"
+      "Integrated the published package into a FastAPI application",
+      "Separated QR generation logic from HTTP request handling",
+      "Implemented image streaming and PNG downloads",
+      "Automated testing with Pytest and HTTPX",
+      "Deployed the web application on Render"
     ],
     "technologies": [
       "Python",
+      "FastAPI",
       "Pillow",
-      "qrcode",
-      "Argparse",
+      "PyPI",
+      "HTML",
+      "CSS",
+      "Jinja2",
       "Pytest",
-      "PyPI"
+      "HTTPX"
     ]
   },
+{
+  "title": "SAH QR Generator Library",
+  "category": "Backend Development",
+  "featured": true,
+  "image": "static/imgs/projects/qr_library.png",
+  "github": "https://github.com/Ahmed122000/QR-Code-Generator",
+  "demo": "https://pypi.org/project/sah-qr-generator/",
+  "description": "A reusable Python library for generating customized QR codes, distributed through PyPI with support for both programmatic usage and command-line execution.",
+  "problem": "QR code generation functionality is often tightly coupled to individual applications, making it difficult to reuse across different Python projects.",
+  "solution": "Developed a reusable Python package that encapsulates QR code generation logic and exposes both a Python API and a command-line interface, allowing developers to integrate QR generation into their applications or use it directly from the terminal.",
+  "technicalHighlights": [
+    "Designed a reusable Python package with a clean public API",
+    "Implemented QR code generation and image customization",
+    "Developed a command-line interface using Python",
+    "Implemented input validation and exception handling",
+    "Configured package metadata and build configuration using pyproject.toml",
+    "Published the package to TestPyPI and PyPI",
+    "Implemented automated tests with Pytest"
+  ],
+  "technologies": [
+    "Python",
+    "Pillow",
+    "qrcode",
+    "Pytest",
+    "setuptools",
+    "PyPI"
+  ]
+},
     {
       "title": "URL Shortener",
       "category": "Backend",
